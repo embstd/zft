@@ -449,13 +449,13 @@ public class ActivityPosPrint extends Activity {
 //			PosPrintUtil.esc.Enter();
 //			PosPrintUtil.esc.Enter();
 			
-			if (Config.cityTag.equals("czs")){
+//			if (Config.cityTag.equals("czs")){
 				PosPrintUtil.esc.setZouZhi();//走纸
-			}else {
-				for (int j=0; j<5; j++){
-					PosPrintUtil.esc.TextOut("\r\n");
-				}
-			}
+//			}else {
+//				for (int j=0; j<5; j++){
+//					PosPrintUtil.esc.TextOut("\r\n");
+//				}
+//			}
 			//测试用走纸
 //			for (int j=0; j<5; j++){
 //				PosPrintUtil.esc.TextOut("\r\n");
@@ -507,13 +507,13 @@ public class ActivityPosPrint extends Activity {
 //					PosPrintUtil.esc.Enter();
 //				}
 //			}
-			if (Config.cityTag.equals("czs")){
+//			if (Config.cityTag.equals("czs")){
 				PosPrintUtil.esc.setZouZhi();//走纸
-			}else {
-				for (int j=0; j<5; j++){
-					PosPrintUtil.esc.TextOut("\r\n");
-				}
-			}
+//			}else {
+//				for (int j=0; j<5; j++){
+//					PosPrintUtil.esc.TextOut("\r\n");
+//				}
+//			}
 			//测试用走纸
 //			for (int j=0; j<5; j++){
 //				PosPrintUtil.esc.TextOut("\r\n");
@@ -559,13 +559,13 @@ public class ActivityPosPrint extends Activity {
 //			PosPrintUtil.esc.TextOut(s[4].toString());
 //			PosPrintUtil.esc.Enter();
 //			PosPrintUtil.esc.Enter();
-			if (Config.cityTag.equals("czs")){
+//			if (Config.cityTag.equals("czs")){
 				PosPrintUtil.esc.setZouZhi();//走纸
-			}else {
-				for (int j=0; j<5; j++){
-					PosPrintUtil.esc.TextOut("\r\n");
-				}
-			}
+//			}else {
+//				for (int j=0; j<5; j++){
+//					PosPrintUtil.esc.TextOut("\r\n");
+//				}
+//			}
 			//测试用走纸
 //			for (int j=0; j<5; j++){
 //				PosPrintUtil.esc.TextOut("\r\n");
@@ -610,13 +610,13 @@ public class ActivityPosPrint extends Activity {
 //			PosPrintUtil.esc.TextOut(s[4].toString());
 //			PosPrintUtil.esc.Enter();
 //			PosPrintUtil.esc.Enter();
-			if (Config.cityTag.equals("czs")){
+//			if (Config.cityTag.equals("czs")){
 				PosPrintUtil.esc.setZouZhi();//走纸
-			}else {
-				for (int j=0; j<5; j++){
-					PosPrintUtil.esc.TextOut("\r\n");
-				}
-			}
+//			}else {
+//				for (int j=0; j<5; j++){
+//					PosPrintUtil.esc.TextOut("\r\n");
+//				}
+//			}
 			//测试用走纸
 //			for (int j=0; j<5; j++){
 //				PosPrintUtil.esc.TextOut("\r\n");
