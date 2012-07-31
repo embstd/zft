@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#99CCCC">
+    
+    <!-- <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </ScrollView> -->
+	<RelativeLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/listTitle">
+	    <TextView android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"
+		     android:text="状态"
+		     android:textSize="20dp"
+		     android:textColor="#0066CC"
+		     android:layout_alignParentLeft="true"
+		     android:id="@+id/stateTitle"/>
+   
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="表单名称"
+	        android:textSize="20dp"
+	        android:textColor="#0066CC"
+	        android:layout_alignParentRight="true"
+	        android:id="@+id/formNameTitle"/>
+	    
+	</RelativeLayout>
+	<View android:layout_width="fill_parent" 
+	        android:layout_height="1px"
+	        android:background="#AAAAAA"
+	        android:layout_below="@+id/listTitle"
+	        android:id="@+id/sepratorLine"/>
+    
+    <ListView
+        android:id="@+id/formList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="#AAAAAA"
+        android:dividerHeight="1px" 
+        android:layout_below="@+id/sepratorLine">
+        
+    </ListView>
+
+</RelativeLayout>

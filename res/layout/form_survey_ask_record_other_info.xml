@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <ScrollView
+        android:id="@+id/sv002"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/form_title_all_11_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_all_name"
+                android:textColor="#111111"
+                android:textSize="18sp"
+                android:paddingTop="20dp" />
+
+            <TextView
+                android:id="@+id/form_title_11_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/form_title_all_11_2"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_11_name"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/form_survey_ask_other_info_1_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/form_title_11_2"
+                android:textSize="15sp" 
+                android:maxLength="2000"
+                android:height="450dip"
+                android:maxLines="1000"
+                />
+
+           
+            
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/record_conditions_5_name_txt">
+                
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    
+    <include android:id="@+id/form_bottom"
+        layout="@layout/form_bottom_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/> 
+    
+    
+
+</RelativeLayout>

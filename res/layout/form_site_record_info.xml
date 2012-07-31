@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <ScrollView
+        android:id="@+id/sv001"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/form_title_all_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_all_name"
+                android:textColor="#111111"
+                android:textSize="18sp" 
+                android:paddingTop="20dp"/>
+
+            <TextView
+                android:id="@+id/form_title_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/form_title_all_2"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_2_name"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/orgnization_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_title_2"
+                android:gravity="center_vertical"
+                android:text="@string/form_orgnization_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/orgnization_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_title_2"
+                android:layout_toRightOf="@id/orgnization_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/competent_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/orgnization_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_competent_name"
+                android:textColor="#111111" 
+                 />
+
+            <EditText
+                android:id="@+id/competent_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/orgnization_name_txt"
+                android:layout_toRightOf="@id/competent_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/competent_post_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/competent_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_competent_post_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/competent_post_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/competent_name_txt"
+                android:layout_toRightOf="@id/competent_post_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/competent_address_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/competent_post_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_competent_address_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/competent_address_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/competent_post_name_txt"
+                android:layout_toRightOf="@id/competent_address_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/competent_phone_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/competent_address_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_competent_phone_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/competent_phone_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/competent_address_name_txt"
+                android:layout_toRightOf="@id/competent_phone_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/citizen_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/competent_phone_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_citizen_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/citizen_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/competent_phone_name_txt"
+                android:layout_toRightOf="@id/citizen_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/citizen_sex_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/citizen_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_citizen_sex_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/citizen_sex_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/citizen_name_txt"
+                android:layout_toRightOf="@id/citizen_sex_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/citizen_age_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/citizen_sex_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_citizen_age_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/citizen_age_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/citizen_sex_name_txt"
+                android:layout_toRightOf="@id/citizen_age_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/citizen_identity_card_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/citizen_age_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_citizen_identity_card_number_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/citizen_identity_card_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/citizen_age_name_txt"
+                android:layout_toRightOf="@id/citizen_identity_card_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/citizen_address_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/citizen_identity_card_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_citizen_address_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/citizen_address_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/citizen_identity_card_name_txt"
+                android:layout_toRightOf="@id/citizen_address_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/citizen_phone_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/citizen_address_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_citizen_phone_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/citizen_phone_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/citizen_address_name_txt"
+                android:layout_toRightOf="@id/citizen_phone_name"
+                android:textSize="15sp" 
+                android:layout_marginBottom="65dp"
+                 android:singleLine="true"/>
+            
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/citizen_phone_name_txt" >
+            </RelativeLayout>
+
+        </RelativeLayout>
+        
+         </ScrollView>
+
+    <include android:id="@+id/form_bottom"
+        layout="@layout/form_bottom_bar"
+        android:layout_alignParentBottom="true"
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+   
+
+</RelativeLayout>

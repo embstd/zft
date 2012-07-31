@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cityTag">
+        <item>cztnq</item>
+        <item>czjts</item>
+        <item>czlys</item>
+        <item>czs</item>
+        <item>czxbq</item>
+        <item>czwjq</item>
+        <item>czzlq</item>
+        <item>czqsyq</item>
+    </string-array>
+    
+    <string-array name="serverIpAddress">
+        <item>10.137.129.52:8022</item>
+        <item>10.137.129.52:8019</item>
+        <item>10.137.129.52:8021</item>
+        <item>10.137.129.54:8080</item>
+        <item>10.137.129.52:8008</item>
+        <item>10.137.129.52:8005</item>
+        <item>192.168.3.2:8080</item>
+        <item>10.137.129.52:8080</item>
+    </string-array>
+    
+    <string-array name="cityName">
+        <item>常州市天宁区</item>
+        <item>金坛市</item>
+        <item>溧阳市</item>
+        <item>常州市</item>
+        <item>常州市新北区</item>
+        <item>常州市武进区</item>
+        <item>常州市钟楼区</item>
+        <item>常州市戚墅堰区</item>
+    </string-array>
+    
+    <string-array name="cgUnitName">
+        <item>常州市天宁区城市管理行政执法局</item>
+        <item>金坛市城市管理行政执法局</item>
+        <item>溧阳市城市管理行政执法局</item>
+        <item>常州市城市管理行政执法局</item>
+        <item>常州市新北区城市管理行政执法局</item>
+        <item>常州市武进区城市管理行政执法局</item>
+        <item>常州市钟楼区城市管理行政执法局</item>
+        <item>常州市戚墅堰区城市管理行政执法局</item>
+    </string-array>
+    
+    <string-array name="cgUnitNameZhiDui">
+        <item>常州市城市管理行政执法支队天宁大队</item>
+        <item>金坛市城市管理行政执法支队</item>
+        <item>溧阳市城市管理行政执法支队</item>
+        <item>常州市城市管理行政执法支队</item>
+        <item>常州市城市管理行政执法支队新北大队</item>
+        <item>常州市城市管理行政执法支队武进大队</item>
+        <item>常州市城市管理行政执法支队钟楼大队</item>
+        <item>常州市城市管理行政执法支队戚墅堰大队</item>
+    </string-array>
+    
+    <string-array name="cgUnitNameDaDui">
+        <item>天宁大队</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="posFormTitle">
+        <item>常天城</item>
+        <item>坛城</item>
+        <item>溧城</item>
+        <item>常城</item>
+        <item>常新城</item>
+        <item>常武城</item>
+        <item>常钟城</item>
+        <item>常戚城</item>
+    </string-array>
+    
+</resources>

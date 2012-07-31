@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tab_radio_style ">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">4dip</item>
+        <item name="android:layout_weight">1.0</item>
+        <!-- 下面引用Button按下的效果xml文件, 在 drawable文件下面
+        <item name="android:background">@drawable/rg_memu_item_bg</item>-->
+    </style>
+
+</resources>

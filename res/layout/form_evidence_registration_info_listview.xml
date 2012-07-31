@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#999999" >
+
+   <ListView android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:paddingTop="20dp"
+       android:id="@+id/form_evidence_registration_info_listview">
+       
+   </ListView>
+
+    <include android:id="@+id/form_bottom"
+        layout="@layout/form_bottom_bar"
+        android:layout_alignParentBottom="true"
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+   
+
+</RelativeLayout>

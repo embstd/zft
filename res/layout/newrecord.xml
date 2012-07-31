@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    >
+   
+
+    <TextView
+    android:id="@+id/newrecord_textview1"
+    android:textSize="30px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="20px"
+    android:layout_above="@+id/newrecord_textview2"
+    android:text="准备录音"
+   
+    ></TextView>
+    
+    <TextView
+    android:id="@+id/newrecord_textview2"
+    android:textSize="70px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:text="00:00:00"
+    ></TextView>
+    
+    <Button
+    android:id="@+id/newrecord_button1"
+    android:text="开始\n录音"
+    android:textSize="24px"
+    android:textStyle="bold"
+    android:layout_width="100px"
+    android:layout_height="90px"
+    android:layout_alignParentBottom="true"
+    android:layout_toLeftOf="@+id/newrecord_button2"
+    android:layout_marginRight="8px"
+    android:background="@drawable/button"
+    ></Button>
+        
+    <Button
+    android:id="@+id/newrecord_button2"
+    android:text="完成"
+    android:textSize="24px"
+    android:textStyle="bold"
+    android:layout_width="100px"
+    android:layout_height="90px"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/button"
+    ></Button>
+    
+    <Button
+    android:id="@+id/newrecord_button3"
+    android:text="取消"
+    android:textSize="24px"
+    android:textStyle="bold"
+    android:layout_width="100px"
+    android:layout_height="90px"
+    android:layout_alignParentBottom="true"
+    android:layout_toRightOf="@+id/newrecord_button2"
+    android:layout_marginLeft="8px"
+     android:background="@drawable/button"
+    ></Button>
+
+</RelativeLayout>

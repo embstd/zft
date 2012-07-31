@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#65a083"
+        android:orientation="horizontal" >
+
+        <!-- 注意Id -->
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+        </TabWidget>
+        
+        <!-- 注意Id -->
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </FrameLayout>
+        
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/rg_main_btns"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#65a083"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <!-- android:drawableTop="@drawable/at_icon" 这句的意思是在文字上面放入图片 -->
+
+                <RadioButton
+                    android:id="@+id/first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/tab_radio_style "
+                    android:background="@drawable/rg_menu_item_bg"
+                    android:text="第一个"
+                    android:textSize="18dp"
+                    android:textColor="#111111" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/tab_radio_style "
+                    android:background="@drawable/rg_menu_item_bg"
+                    android:text="第二个"
+                    android:textSize="18dp"
+                    android:textColor="#111111" >
+                </RadioButton>
+
+                <!--
+            <RadioButton
+                android:id="@+id/third"
+                style="@style/main_style "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/third_icon"
+                android:text="第三个" >
+            </RadioButton>
+                -->
+
+            </RadioGroup>
+
+            <!-- <include
+                android:id="@+id/form_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                layout="@layout/form_bottom_bar" /> -->
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

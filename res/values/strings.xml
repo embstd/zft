@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">执法通</string>
+    <string name="current_city">czs</string>
+    
+    <string name="form_title_all_name">常州市天宁区城市管理行政执法支队</string>
+    <string name="form_title_1_name">限期提供合法手续通知书</string>
+    <string name="form_title_2_name">现场检查笔录</string>
+    <string name="form_title_3_name">核查通知书</string>
+    <string name="form_title_4_name">证据先行登记保存通知书</string>
+    <string name="form_title_5_name">责令改正通知书</string>
+    <string name="form_title_6_name">送达回证</string>
+    <string name="form_title_7_name">责令停止建设通知书</string>
+    <string name="form_title_8_name">停止违法（章）行为通知书</string>
+    <string name="form_title_9_name">行政处罚事先告知书</string>
+    <string name="form_title_9_1_name">行政处罚听证告知书</string>
+    <string name="form_title_10_name">解除停止建设通知书</string>
+    <string name="form_title_11_name">调查询问笔录</string>
+    <string name="form_title_12_name">证人证言笔录</string>
+    <string name="form_title_13_name">当场处罚决定书</string>
+    <string name="form_title_14_name">行政处罚决定书</string>
+    <string name="form_title_15_name">证据先行登记保存现场笔录</string>
+    <string name="form_title_16_name">扣押决定书</string>
+    <string name="form_title_17_name">扣押现场笔录</string>
+    <string name="form_title_18_name">证据先行登记保存决定书</string>
+    
+    <!-- 限期提供合法手续通知书 -->
+    <string name="form_notification_unit_name">通知单位:</string>
+    <string name="form_illegal_location_name">违法地点:</string>
+    <string name="form_illegal_behavior_name">违法行为:</string>
+    <string name="form_limited_date_name">限定日期:</string>
+    
+    <!-- 现场检查笔录 基础信息 -->
+    <string name="form_orgnization_name">法人或其他组织名称:</string>
+    <string name="form_competent_name">负责人姓名:</string>
+    <string name="form_competent_post_name">职务:</string>
+    <string name="form_competent_address_name">地址:</string>
+    <string name="form_competent_phone_name">电话:</string>
+    
+    <string name="form_citizen_name">公民姓名:</string>
+    <string name="form_citizen_sex_name">性别:</string>
+    <string name="form_citizen_age_name">年龄:</string>
+    <string name="form_citizen_identity_card_number_name">身份证号码:</string>
+    <string name="form_citizen_address_name">地址:</string>
+    <string name="form_citizen_phone_name">电话:</string>
+    
+    <!-- 记录情况 -->
+    <string name="form_record_conditions_1_name">现场检查记录情况:</string>
+    <string name="form_record_conditions_2_name">现场勘察示意图说明:</string>
+    <string name="form_record_conditions_3_name">检查时间:</string>
+    <string name="form_record_conditions_4_name">方位:</string>
+    <string name="form_record_conditions_5_name">绘制人姓名和身份:</string>
+    
+    <!-- 停工(核查)通知书 -->
+    <string name="form_verification_notice_1_name">通知单位:</string>
+    <string name="form_verification_notice_2_name">违法时间:</string>
+    <string name="form_verification_notice_3_name">违法地点:</string>
+    <string name="form_verification_notice_4_name">违法行为:</string>
+    <string name="form_verification_notice_5_name">违反规定:</string>
+    <string name="form_verification_notice_6_name">接受处理:</string>
+    <string name="form_verification_notice_7_name">时间:</string>
+    <string name="form_verification_notice_8_name">部门:</string>
+    <string name="form_verification_notice_9_name">地址:</string>
+    <string name="form_verification_notice_10_name">电话:</string>
+    <string name="form_verification_notice_11_name">调查处理材料:</string>
+    <string name="form_verification_notice_12_name">上述行为的书面情况说明;</string>
+    
+    <!-- 证据先行登记保存通知书  基本信息-->
+    <string name="form_evidence_registration_1_name">通知单位:</string>
+    <string name="form_evidence_registration_2_name">违法时间:</string>
+    <string name="form_evidence_registration_3_name">违法地点:</string>
+    <string name="form_evidence_registration_4_name">违法行为:</string>
+    <string name="form_evidence_registration_5_name">接受处理:</string>
+    <string name="form_evidence_registration_6_name">时间:</string>
+    <string name="form_evidence_registration_7_name">部门:</string>
+    <string name="form_evidence_registration_8_name">地址:</string>
+    <string name="form_evidence_registration_9_name">电话:</string>
+    <string name="form_evidence_registration_10_name">保存地点:</string>
+    
+    <!-- 证据信息 -->
+    <string name="form_evidence_registration_info_1_name">编号:</string>
+    <string name="form_evidence_registration_info_2_name">单位:</string>
+    <string name="form_evidence_registration_info_3_name">数量:</string>
+    <string name="form_evidence_registration_info_4_name">物品名称:</string>
+    <string name="form_evidence_registration_info_5_name">规格型号:</string>
+    <string name="form_evidence_registration_info_6_name">备注:</string>
+    
+    <!-- 责令改正通知书 -->
+    <string name="form_order_correct_1_name">通知单位:</string>
+    <string name="form_order_correct_2_name">违法时间:</string>
+    <string name="form_order_correct_3_name">违法地点:</string>
+    <string name="form_order_correct_4_name">违法行为:</string>
+    <string name="form_order_correct_5_name">违反规定:</string>
+    <string name="form_order_correct_6_name">责令改正:</string>
+    <string name="form_order_correct_7_name">立即停止上述行为</string>
+    <string name="form_order_correct_8_name">责令于                    改正</string>
+    
+    <!-- 送达回证 -->
+    <string name="form_songda_huizheng_1_name">案       由:</string>
+    <string name="form_songda_huizheng_2_name">受送达人:</string>
+    <string name="form_songda_huizheng_3_name">送达 地点:</string>
+    <string name="form_songda_huizheng_4_name">文书名称:</string>
+    <string name="form_songda_huizheng_5_name">送达文号:</string>
+    <string name="form_songda_huizheng_6_name">送达方式:</string>
+    <string name="form_songda_huizheng_7_name">备      注:</string>
+    
+        <!-- 责令停止建设通知书 -->
+    <string name="form_order_stop_1_name">通知单位:</string>
+    <string name="form_order_stop_2_name">违法地点:</string>
+    <string name="form_order_stop_3_name">违法建设:</string>
+    <string name="form_order_stop_4_name">限定日期:</string>
+    <string name="form_order_stop_5_name">联系人:</string>
+    <string name="form_order_stop_6_name">电话:</string>
+    
+    <!-- 停止违法（章）行为通知书 -->
+    <string name="form_stop_illeage_1_name">通知单位:</string>
+    <string name="form_stop_illeage_2_name">违法地点:</string>
+    <string name="form_stop_illeage_3_name">违法内容:</string>
+    <string name="form_stop_illeage_4_name">根据规定:</string>
+    <string name="form_stop_illeage_5_name">携带证件:</string>
+     <!-- 行政处罚事先告知书 -->
+    <string name="form_publish_before_notice_1_name">通知单位:</string>
+    <string name="form_publish_before_notice_2_name">违法时间:</string>
+    <string name="form_publish_before_notice_3_name">违法地点:</string>
+    <string name="form_publish_before_notice_4_name">违法行为:</string>
+    <string name="form_publish_before_notice_5_name">违反规定:</string>
+    <string name="form_publish_before_notice_6_name">处罚依据:</string>
+    <string name="form_publish_before_notice_7_name">行政处罚:</string>
+    <string name="form_publish_before_notice_8_name">陈述、申辩</string>
+    <string name="form_publish_before_notice_9_name">部门:</string>
+    <string name="form_publish_before_notice_10_name">地址:</string>
+    <string name="form_publish_before_notice_11_name">电话:</string>
+    <!-- 解除停止建设通知书 -->
+    <string name="form_remove_order_stop_1_name">通知单位:</string>
+    <string name="form_remove_order_stop_2_name">违法地点:</string>
+    <string name="form_remove_order_stop_3_name">违法行为:</string>
+    <string name="form_remove_order_stop_4_name">发出日期:</string>
+    <string name="form_remove_order_stop_5_name">原停止No:</string>
+  
+    <!-- 调查询问笔录  基本信息-->
+    <string name="form_survey_ask_base_info_1_name">时间:</string>
+    <string name="form_survey_ask_base_info_2_name">地点:</string>
+    <string name="form_survey_ask_base_info_3_name">调查人:</string>
+    <string name="form_survey_ask_base_info_4_name">记录人:</string>
+    <string name="form_survey_ask_base_info_5_name">被调查人:</string>
+    <string name="form_survey_ask_base_info_6_name">性别:</string>
+    <string name="form_survey_ask_base_info_7_name">身份证号码:</string>
+    <string name="form_survey_ask_base_info_8_name">电话:</string>
+    <string name="form_survey_ask_base_info_9_name">出生年月:</string>
+    <string name="form_survey_ask_base_info_10_name">住所:</string>
+    <string name="form_survey_ask_base_info_11_name">工作单位:</string>
+    <string name="form_survey_ask_base_info_12_name">职务:</string>
+    <string name="form_survey_ask_base_info_13_name">邮编:</string>
+    <string name="form_survey_ask_base_info_14_name">住所:</string>
+    
+    <!-- 调查笔录  -->
+    <string name="form_survey_ask_other_info_1_name">内容:</string>
+    
+    <!-- 当场处罚决定书 -->
+    <string name="form_site_publish_determin_1_name">违法时间:</string>
+    <string name="form_site_publish_determin_2_name">违法地点:</string>
+    <string name="form_site_publish_determin_3_name">违法行为:</string>
+    <string name="form_site_publish_determin_4_name">违反规定:</string>
+    <string name="form_site_publish_determin_5_name">处罚依据:</string>
+    <string name="form_site_publish_determin_6_name">责令改正:</string>
+    <string name="form_site_publish_determin_7_name">行政处罚:</string>
+    <string name="form_site_publish_determin_8_name">行政:</string>
+    <string name="form_site_publish_determin_9_name">处罚地:</string>
+    <string name="form_site_publish_determin_10_name">处罚票号:</string>
+    <string name="form_site_publish_determin_11_name">司法起诉:</string>
+    
+    <!-- 证据先行登记保存现场笔录-->
+    <string name="form_evidence_registration_site_record_1_name">案由:</string>
+    <string name="form_evidence_registration_site_record_2_name">违法时间:</string>
+    <string name="form_evidence_registration_site_record_3_name">违法地点:</string>
+    <string name="form_evidence_registration_site_record_4_name">违法行为:</string>
+    <string name="form_evidence_registration_site_record_5_name">陈述和申辩:</string>
+</resources>

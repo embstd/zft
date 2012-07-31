@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <ScrollView
+        android:id="@+id/sv001"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/form_title_all_11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_all_name"
+                android:textColor="#111111"
+                android:textSize="18sp" 
+                android:paddingTop="20dp"/>
+
+            <TextView
+                android:id="@+id/form_title_11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/form_title_all_11"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_11_name"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_title_11"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_1_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_1_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_title_11"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_1_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_1_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_2_name"
+                android:textColor="#111111" 
+                 />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_2_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_1_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_2_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_2_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_3_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_3_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_2_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_3_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_4_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_3_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_4_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_4_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_3_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_4_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_5_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_4_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_5_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_5_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_4_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_5_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_6_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_5_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_6_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_6_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_5_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_6_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_7_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_6_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_7_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_7_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_6_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_7_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_8_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_7_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_8_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_8_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_7_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_8_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_9_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_8_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_9_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_9_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_8_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_9_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_10_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_9_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_10_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_10_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_9_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_10_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_11_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_10_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_11_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_11_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_10_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_11_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+            
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_12_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_11_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_12_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_12_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_11_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_12_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+            
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_13_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_12_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_13_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_13_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_12_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_13_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+            
+            <TextView
+                android:id="@+id/form_survey_ask_base_info_14_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_survey_ask_base_info_13_name_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_survey_ask_base_info_14_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/form_survey_ask_base_info_14_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_survey_ask_base_info_13_name_txt"
+                android:layout_toRightOf="@id/form_survey_ask_base_info_14_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+            
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/citizen_phone_name_txt" >
+            </RelativeLayout>
+
+        </RelativeLayout>
+        
+         </ScrollView>
+
+    <include android:id="@+id/form_bottom"
+        layout="@layout/form_bottom_bar"
+        android:layout_alignParentBottom="true"
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+   
+
+</RelativeLayout>

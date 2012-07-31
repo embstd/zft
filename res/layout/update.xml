@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+xmlns:android="http://schemas.android.com/apk/res/android" 
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent"
+android:background="#aaaaaa"
+>
+
+
+<TextView 
+android:text="更新文件加载中..." 
+android:id="@+id/update_textview1" 
+android:layout_width="fill_parent" 
+android:layout_height="wrap_content"
+android:layout_centerInParent="true"
+android:textColor="#FF0000"
+android:textSize="20px"
+android:gravity="center"
+></TextView>
+
+ <ProgressBar
+    android:id="@+id/update_progressbar"
+    android:layout_width="200px"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:layout_below="@+id/update_textview1"
+    android:layout_centerHorizontal="true"
+    style="?android:attr/progressBarStyleHorizontal" />
+  />
+
+<Button
+android:id="@+id/update_button1"
+android:text="再次尝试更新"
+android:layout_width="150px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/update_progressbar"
+android:layout_marginTop="20px"
+android:layout_centerHorizontal="true"
+android:visibility="invisible"
+></Button>
+
+</RelativeLayout>

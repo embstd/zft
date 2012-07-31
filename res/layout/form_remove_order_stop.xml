@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <ScrollView
+        android:id="@+id/sv005"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/form_title_all_10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_all_name"
+                android:textColor="#111111"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/form_title_10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/form_title_all_10"
+                android:gravity="center_horizontal"
+                android:text="@string/form_title_10_name"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/remove_order_stop_1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/form_title_10"
+                android:gravity="center_vertical"
+                android:text="@string/form_remove_order_stop_1_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/remove_order_stop_1_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_title_10"
+                android:layout_toRightOf="@id/remove_order_stop_1_name"
+                android:textSize="15sp" 
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/remove_order_stop_2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/remove_order_stop_1_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_remove_order_stop_2_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/remove_order_stop_2_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/remove_order_stop_1_txt"
+                android:layout_toRightOf="@id/remove_order_stop_2_name"
+                android:textSize="15sp" 
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/remove_order_stop_3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/remove_order_stop_2_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_remove_order_stop_3_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/remove_order_stop_3_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/remove_order_stop_2_txt"
+                android:layout_toRightOf="@id/remove_order_stop_3_name"
+                android:textSize="15sp" 
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/remove_order_stop_4_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/remove_order_stop_3_txt"
+                android:gravity="center_vertical"
+                android:textColor="#111111" 
+                android:text="责令停止建设通知书  发出日期:"/>
+
+            <EditText
+                android:id="@+id/remove_order_stop_4_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/remove_order_stop_3_txt"
+                android:layout_toRightOf="@id/remove_order_stop_4_name"
+                android:textSize="15sp" 
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:id="@+id/remove_order_stop_5_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/remove_order_stop_4_txt"
+                android:gravity="center_vertical"
+                android:text="@string/form_remove_order_stop_5_name"
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/remove_order_stop_5_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/remove_order_stop_4_txt"
+                android:layout_toRightOf="@id/remove_order_stop_5_name"
+                android:textSize="15sp" 
+                android:singleLine="true"/>
+
+            
+            
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/remove_order_stop_5_txt">
+                
+            </RelativeLayout>
+
+            
+        </RelativeLayout>
+        
+         </ScrollView>
+
+    <include android:id="@+id/form_bottom"
+        layout="@layout/form_bottom_bar"
+        android:layout_alignParentBottom="true"
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+   
+
+</RelativeLayout>

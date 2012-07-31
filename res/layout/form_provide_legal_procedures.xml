@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef" >
+
+    <ScrollView
+        android:id="@+id/sv000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <RelativeLayout 
+            android:id="@+id/rl000"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/form_title_all"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/form_title_all_name"
+            android:textColor="#111111"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/form_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/form_title_all"
+            android:gravity="center_horizontal"
+            android:text="@string/form_title_1_name"
+            android:textColor="#111111"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/notification_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/form_title"
+            android:gravity="center_vertical"
+            android:text="@string/form_notification_unit_name"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/notification_unit_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/form_title"
+            android:layout_toRightOf="@id/notification_unit"
+            android:textSize="15sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/illegal_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/notification_unit_txt"
+            android:gravity="center_vertical"
+            android:text="@string/form_illegal_location_name"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/illegal_location_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/notification_unit_txt"
+            android:layout_toRightOf="@id/illegal_location"
+            android:textSize="15sp" 
+             android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/illegal_behavior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/illegal_location_txt"
+            android:gravity="center_vertical"
+            android:text="@string/form_illegal_behavior_name"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/illegal_behavior_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/illegal_location_txt"
+            android:layout_toRightOf="@id/illegal_behavior"
+            android:textSize="15sp" 
+             android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/limited_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/illegal_behavior_txt"
+            android:gravity="center_vertical"
+            android:text="@string/form_limited_date_name"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/limited_date_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/illegal_behavior_txt"
+            android:layout_toRightOf="@id/limited_date"
+            android:textSize="15sp"
+             android:singleLine="true" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/form_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/rl000"
+        layout="@layout/form_bottom_bar" />
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/form_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/form_bottom_bar" >
+        
+        <TextView android:id="@+id/report_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="上报案卷"
+            android:textSize="20sp"/>
+        
+         <TextView android:id="@+id/A4_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="A4"
+            android:textSize="20sp"/> 
+        
+        <TextView android:id="@+id/pos_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="pos打印"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+    -->
+
+</RelativeLayout>
