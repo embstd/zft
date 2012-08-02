@@ -47,6 +47,7 @@ public class CameraPreView extends SurfaceView implements SurfaceHolder.Callback
         Camera.Parameters parameters = mCamera.getParameters();   
         parameters.setPictureFormat(PixelFormat.JPEG);//设置图片格式  
         parameters.setFlashMode(activity.flashMode);
+
 //        parameters.setPictureSize(320, 240);//设置分辨率   
 //        parameters.setPictureSize(800, 600);	//
         parameters.setPictureSize(640, 480);
@@ -179,11 +180,10 @@ public class CameraPreView extends SurfaceView implements SurfaceHolder.Callback
 //    	mCamera.getParameters().setZoom(zoom);
     	mCamera.getParameters().set("zoom", zoom/10);
 //    	mCamera.startSmoothZoom(zoom);
-//    	mCamera.getParameters().setZoom(zoom);
-    	
+//    	mCamera.getParameters().setZoom(zoom); 	
 //    	mCamera.notifyAll();
     }
-
+    
 	@Override
 	public void onAutoFocus(boolean success, Camera camera) {
 		// TODO Auto-generated method stub

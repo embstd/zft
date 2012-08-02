@@ -155,14 +155,17 @@ public class ActivitySongdaHuizheng extends Activity {
 //		}
 //		Log.i("ZFTSP", "Config.casePositionId: " + Config.casePositionId + " Config.casePositionId: " + Config.casePositionId);
 		et_songda_huizheng_1.setText(Config.currentSongdaHuizhengList.get(0).getTypeName());
+//		et_songda_huizheng_1.setText(Config.currentSongdaHuizhengList.get(0).getCaseAnYou());
 		if (Config.currentSongdaHuizhengList.get(0).getOrganise().equals("") ||
 				Config.currentSongdaHuizhengList.get(0).getOrganise() == null){
 			et_songda_huizheng_2.setText(Config.currentSongdaHuizhengList.get(0).getPerson());
 			et_songda_huizheng_3.setText(Config.currentSongdaHuizhengList.get(0).getPadd());
+			
 		}else {
 			et_songda_huizheng_2.setText(Config.currentSongdaHuizhengList.get(0).getOrganise());
 			et_songda_huizheng_3.setText(Config.currentSongdaHuizhengList.get(0).getOadd());
 		}
+//		et_songda_huizheng_3.setText(Config.currentSongdaHuizhengList.get(0).getAddress());
 		
 		et_songda_huizheng_4.setText(getWenShuName());
 		et_songda_huizheng_5.setText(Config.currentSongdaHuizhengList.get(0).getLsh());
@@ -362,6 +365,8 @@ public class ActivitySongdaHuizheng extends Activity {
 		SongdaHuizheng tempSD = Config.currentSongdaHuizhengList.get(0);
 		Calendar calendar = Calendar.getInstance();
 		int year = calendar.get(Calendar.YEAR);
+		int month = calendar.get(Calendar.MONTH) + 1;
+		int day = calendar.get(Calendar.DAY_OF_MONTH);
 		
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all.getText().toString().trim()).append("\r\n");
@@ -388,8 +393,13 @@ public class ActivitySongdaHuizheng extends Activity {
 		content.append("证明人:\r\n\r\n");
 		content.append("注：受送达人或者他的同住成年家属拒绝接受文书的，送达人可邀请有关基层 "
 				+ "组织或者所在单位的代表到场，说明情况，在送达回证上记明拒收事由和日期，由"
-				+ "送达人、见证人签名或盖章，把文书留在受送达人的住所，即视为送达。");
+				+ "送达人、见证人签名或盖章，把文书留在受送达人的住所，即视为送达。").append("_");
 		
+		//年月日
+		//年月日
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append(String.valueOf(month)).append(" 月 ");
+		content.append(String.valueOf(day)).append(" 日");
 		
 		return content.toString();
 //		return Html.fromHtml(content.toString()).toString();

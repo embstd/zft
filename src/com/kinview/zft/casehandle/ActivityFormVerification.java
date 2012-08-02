@@ -276,6 +276,10 @@ public class ActivityFormVerification extends Activity {
 		
 		et_verification_notice_9.setText(Config.user.getBranch_address());//µÿ÷∑
 		et_verification_notice_10.setText(Config.user.getBranch_phone());//µÁª∞
+		et_verification_notice_9.setEnabled(false);
+		et_verification_notice_9.setFocusable(false);
+		et_verification_notice_10.setEnabled(false);
+		et_verification_notice_10.setFocusable(false);
 //		et_verification_notice_11.setText(Config.currentNewCaseList.get(0).getOrganise());
 //		et_verification_notice_12.setText(Config.currentNewCaseList.get(0).getOrganise());
 	}

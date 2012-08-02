@@ -149,10 +149,10 @@ public class ActivityFormSiteRecordSituation extends Activity {
 				+"（证号："+Config.user.getZfzid()+"、"+Config.user.getU_ZfzID()+"）巡查至"
 				+Config.currentNewCaseList.get(0).getAddress()+" 时，发现该当事人"
 				+Config.currentNewCaseList.get(0).getCaseWeiFaXW()+" 。执法人员亮证检查，当事人现场未能提供任何合法、有效手续。执法人员拍照取证。");
-//		et_record_conditions_2;
+		et_record_conditions_2.setText("阴影部分所示即为违章地点");
 		et_record_conditions_3.setText(Config.timebyYMDHMS());
-//		et_record_conditions_4;
-//		et_record_conditions_5;
+		et_record_conditions_4.setText("↑北");
+		et_record_conditions_5.setText("行政执法人员  "+Config.name);
 	}
 	
 	private Handler myHandler = new Handler(){

@@ -7,6 +7,23 @@ public class SongdaHuizheng {
 	private String person = "";//个人名称
 	private String padd = "";//个人地址
 	private String lsh  = "";//流水号
+	
+	private String  CaseAnYou;        //请选择案由    上报案件中第二选项
+	private String  Address; /// 案发地点
+	
+	
+	public String getCaseAnYou() {
+		return CaseAnYou;
+	}
+	public void setCaseAnYou(String caseAnYou) {
+		CaseAnYou = caseAnYou;
+	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
 	public String getTypeName() {
 		return typeName;
 	}

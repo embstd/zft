@@ -304,6 +304,7 @@
                 android:layout_below="@id/verification_notice_12_name_txt"
                 android:layout_toRightOf="@id/verification_notice_13_name"
                 android:textSize="15sp" 
+                android:text="@string/form_verification_notice_13_name"
                  android:singleLine="true"/>
             
             <TextView
@@ -324,6 +325,7 @@
                 android:layout_below="@id/verification_notice_13_name_txt"
                 android:layout_toRightOf="@id/verification_notice_14_name"
                 android:textSize="15sp" 
+                android:text="@string/form_verification_notice_14_name"
                 android:layout_marginBottom="65dp"
                  android:singleLine="true"/>
             

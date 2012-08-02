@@ -156,7 +156,8 @@ public class PhotoMgr {
 		sort();
 	}
 	
-	public Photo loadItemByFileName(String fileName){
+	public Photo loadItemByFileName(String fileName)
+	{
 		if(fileName.equals("")){
 			return null;
 		}
@@ -170,7 +171,8 @@ public class PhotoMgr {
 		return item;
 	}
 	
-	public boolean checkSDKard(){
+	public boolean checkSDKard()
+	{
 		return Environment.getExternalStorageState().equals(
 		        android.os.Environment.MEDIA_MOUNTED);
 	}
