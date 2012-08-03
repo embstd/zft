@@ -243,6 +243,8 @@ public class ActivityFormProvide extends Activity {
 		et_limited_date = (EditText)this.findViewById(R.id.limited_date_txt);
 		
 		tv_form_title_all.setText(Config.cgUnitName);
+		
+//		tv_form_title.setText(getResources().getString(R.string.form_title_1_name));
 	}
 	
 	
@@ -276,7 +278,8 @@ public class ActivityFormProvide extends Activity {
 		
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title.getText().toString().trim()).append("_");
+//		content.append(tempform.getFormName()).append("_");
 		content.append(Config.posFormTitle +"执通字[").append(String.valueOf(year)).append("]  \r\nNo.")
 		.append(tempCase.getLsh()).append("_");
 		content.append(et_notification_nuit.getText().toString().trim()).append(":\r\n\r\n");
@@ -316,7 +319,7 @@ public class ActivityFormProvide extends Activity {
 		content.append("执法人员:  ").append("_");
 		
 		//年月日
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		

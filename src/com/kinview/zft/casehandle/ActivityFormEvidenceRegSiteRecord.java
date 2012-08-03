@@ -415,6 +415,9 @@ public class ActivityFormEvidenceRegSiteRecord extends Activity {
 //		et_evidence_registration_10 = (EditText)this.findViewById(R.id.evidence_registration_10_txt);
 		
 		tv_form_title_all_4.setText(Config.cgUnitName);
+		if (Config.cityTag.equals("czjts")){
+			tv_form_title_4.setText(getResources().getString(R.string.form_title_15_name));
+		}
 	}
 	
 	private String getFormContent(){
@@ -446,7 +449,8 @@ public class ActivityFormEvidenceRegSiteRecord extends Activity {
 		}
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all_4.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title_4.getText().toString().trim()).append("\r\n").append("_");
+//		content.append(tempform.getFormName()).append("_");
 //		content.append(Config.posFormTitle +"Ö´µÇ´æ×Ö[").append(String.valueOf(year1)).append("]  \r\nNo.")
 //		.append(tempCase.getLsh()).append("_");
 		

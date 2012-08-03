@@ -71,6 +71,7 @@ public class ActivityFormVerification extends Activity {
 	private EditText et_verification_notice_12;
 	private EditText et_verification_notice_13;
 	private EditText et_verification_notice_14;
+	private EditText et_verification_notice_15;
 	
 	private String xiandingTimeStr = "";//限定时间的string
 	
@@ -239,6 +240,7 @@ public class ActivityFormVerification extends Activity {
 		lockEditText(et_verification_notice_12);
 		lockEditText(et_verification_notice_13);
 		lockEditText(et_verification_notice_14);
+		lockEditText(et_verification_notice_15);
 	}
 	//已上报案件 所有信息不可修改
 	private void lockEditText(EditText et){
@@ -395,6 +397,7 @@ public class ActivityFormVerification extends Activity {
 		et_verification_notice_12 = (EditText)this.findViewById(R.id.verification_notice_12_name_txt);
 		et_verification_notice_13 = (EditText)this.findViewById(R.id.verification_notice_13_name_txt);
 		et_verification_notice_14 = (EditText)this.findViewById(R.id.verification_notice_14_name_txt);
+		et_verification_notice_15 = (EditText)this.findViewById(R.id.verification_notice_15_name_txt);
 		
 		tv_form_title_all_3.setText(Config.cgUnitName);
 	}
@@ -423,14 +426,15 @@ public class ActivityFormVerification extends Activity {
 		
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all_3.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title_3.getText().toString().trim()).append("_");
+//		content.append(tempform.getFormName()).append("_");
 		content.append(Config.posFormTitle +"执核字[").append(String.valueOf(year1)).append("]  \r\nNo.")
 		.append(tempCase.getLsh()).append("_");
 		content.append(et_verification_notice_1.getText().toString().trim()).append(":\r\n\r\n");
-		content.append("    经查，你（单位）于  ").append(et_verification_notice_2.getText().toString().trim())
-		.append("，在  ").append(et_verification_notice_3.getText().toString().trim())
-		.append("，进行  ").append(et_verification_notice_4.getText().toString().trim())
-		.append("的行为，已涉嫌违反  ")
+		content.append("    经查，你（单位）于").append(et_verification_notice_2.getText().toString().trim())
+		.append("，在").append(et_verification_notice_3.getText().toString().trim())
+		.append("，进行").append(et_verification_notice_4.getText().toString().trim())
+		.append("的行为，已涉嫌违反")
 		.append(tempCase.getFazhe()).append("之规定.\r\n    ");//分段
 		content.append("因你（单位）未能提供上述行为之合法依据，现责令你（单位）自接到本通知之日起，立即停止上述行为，并于");
 		content.append(String.valueOf(mYear)).append(" 年 ");
@@ -450,6 +454,9 @@ public class ActivityFormVerification extends Activity {
 		if (!et_verification_notice_14.getText().toString().trim().equals("")) {
 			content.append("3: ").append(et_verification_notice_14.getText().toString().trim()).append("\r\n");
 		}
+		if (!et_verification_notice_15.getText().toString().trim().equals("")) {
+			content.append("4: ").append(et_verification_notice_15.getText().toString().trim()).append("\r\n");
+		}
 		content.append("当事人签名:\r\n\r\n\r\n");
 		content.append("执法人员签名:\r\n\r\n\r\n");
 		content.append("见证人签名:\r\n\r\n\r\n");
@@ -457,7 +464,7 @@ public class ActivityFormVerification extends Activity {
 		//地址
 		
 		content.append("_");
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
 		content.append(String.valueOf(month1)).append(" 月 ");
 		content.append(String.valueOf(day1)).append(" 日");
 		return content.toString();
@@ -530,6 +537,7 @@ public class ActivityFormVerification extends Activity {
 //		if (!et_verification_notice_14.getText().toString().trim().equals("")) {
 			content.append(et_verification_notice_14.getText().toString().trim()).append("_");
 //		}
+			content.append(et_verification_notice_15.getText().toString().trim()).append("_");
 			content.append(year1).append("_");	
 			content.append(month1).append("_");
 			content.append(day1);

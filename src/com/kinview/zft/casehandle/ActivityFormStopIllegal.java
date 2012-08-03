@@ -254,7 +254,8 @@ public class ActivityFormStopIllegal extends Activity {
 		
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all_5.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title_5.getText().toString().trim()).append("\r\n").append("_");
+//		content.append(tempform.getFormName()).append("_");
 		content.append(Config.posFormTitle +"执停通字[").append(String.valueOf(year1)).append("]  \r\nNo.")
 		.append(tempCase.getLsh()).append("_");
 		content.append("违法（章）单位（人）：").append(et_stop_illeage_1.getText().toString().trim()).append("\r\n");
@@ -276,7 +277,7 @@ public class ActivityFormStopIllegal extends Activity {
 		content.append("(地址："+Config.user.getBranch_address()+"   联系电话： "+Config.user.getBranch_phone()+"  )接受处理。\r\n\r\n\r\n ");
 		
 		content.append("_");
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
 		content.append(String.valueOf(month1)).append(" 月 ");
 		content.append(String.valueOf(day1)).append(" 日");
 		

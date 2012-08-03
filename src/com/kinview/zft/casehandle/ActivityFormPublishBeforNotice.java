@@ -286,7 +286,9 @@ public class ActivityFormPublishBeforNotice extends Activity{
 		
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all_3.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title_3.getText().toString().trim()).append("\r\n").append("_");
+		
+//		content.append(tempform.getFormName()).append("_");
 		content.append(Config.posFormTitle +"Ö´¸æ×Ö[").append(String.valueOf(year)).append("]  \r\nNo.")
 		.append(tempCase.getLsh()).append("_");
 		content.append(et_publish_before_notice_1.getText().toString().trim()).append(":\r\n\r\n");

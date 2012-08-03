@@ -448,7 +448,8 @@ public class ActivityFormEvidenceReg extends Activity {
 		}
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all_4.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title_4.getText().toString().trim()).append("_");
+//		content.append(tempform.getFormName()).append("_");
 		content.append(Config.posFormTitle +"执登存字[").append(String.valueOf(year1)).append("]  \r\nNo.")
 		.append(tempCase.getLsh()).append("_");
 		
@@ -483,7 +484,7 @@ public class ActivityFormEvidenceReg extends Activity {
 //		content.append("批准人签字：").append("  \r\n\r\n");
 		
 		content.append("_");
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
 		content.append(String.valueOf(month1)).append(" 月 ");
 		content.append(String.valueOf(day1)).append(" 日");
 		

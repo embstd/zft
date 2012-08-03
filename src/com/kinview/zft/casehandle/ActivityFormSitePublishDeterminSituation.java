@@ -290,7 +290,8 @@ public class ActivityFormSitePublishDeterminSituation extends Activity {
 		}
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all_2.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title_2.getText().toString().trim()).append("\r\n").append("_");
+//		content.append(tempform.getFormName()).append("_");
 		content.append(Config.posFormTitle+"执当罚字[").append(String.valueOf(year)).append("]  \r\nNo.")
 		.append(tempCase.getLsh()).append("_");
 		String[] otherStr = Config.otherTabBdContent.split("_");
@@ -340,7 +341,7 @@ public class ActivityFormSitePublishDeterminSituation extends Activity {
 //		content.append("见证人签名:").append("\r\n\r\n\r\n");
 		
 		content.append("_");
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		return content.toString();

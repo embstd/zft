@@ -259,7 +259,8 @@ public class ActivityFormOrderCorrect extends Activity {
 		
 		StringBuffer content = new StringBuffer();
 		content.append(tv_form_title_all_5.getText().toString().trim()).append("\r\n");
-		content.append(tempform.getFormName()).append("_");
+		content.append(tv_form_title_5.getText().toString().trim()).append("_");
+//		content.append(tempform.getFormName()).append("_");
 		content.append(Config.posFormTitle +"执改字[").append(String.valueOf(year)).append("]  \r\nNo.")
 		.append(tempCase.getLsh()).append("_");
 		content.append(et_order_correct_1.getText().toString().trim()).append(":\r\n\r\n");
@@ -286,7 +287,7 @@ public class ActivityFormOrderCorrect extends Activity {
 		.append("当事人签字:\r\n\r\n\r\n").append("见证人签字:\r\n\r\n\r\n");;
 		content.append("执法人员签字:\r\n\r\n\r\n");
 		content.append("_");
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		
