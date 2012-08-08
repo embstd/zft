@@ -345,6 +345,27 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/verification_notice_14_name_txt"
                 android:layout_toRightOf="@id/verification_notice_15_name"
+                android:text="@string/form_verification_notice_15_name"
+                android:textSize="15sp" 
+                 android:singleLine="true"/>
+            
+            <TextView
+                android:id="@+id/verification_notice_16_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/verification_notice_15_name_txt"
+                android:gravity="center_vertical"
+                android:text="5. "
+                android:textColor="#111111" />
+
+            <EditText
+                android:id="@+id/verification_notice_16_name_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/verification_notice_15_name_txt"
+                android:layout_toRightOf="@id/verification_notice_16_name"
                 android:textSize="15sp" 
                 android:layout_marginBottom="65dp"
                  android:singleLine="true"/>
@@ -352,7 +373,7 @@
             <RelativeLayout 
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/verification_notice_14_name_txt">
+                android:layout_below="@id/verification_notice_16_name_txt">
                 
             </RelativeLayout>
             

@@ -267,9 +267,9 @@ public class ActivityFormOrderCorrect extends Activity {
 		content.append("    经查，你（单位）于  ").append(et_order_correct_2.getText().toString().trim())
 		.append("  ，在  ").append(et_order_correct_3.getText().toString().trim())
 		.append("  ，进行  ").append(et_order_correct_4.getText().toString().trim())
-		.append("  的行为，已违反  ")
+		.append("的行为，已违反")
 		.append(tempCase.getYiju());
-		content.append("  的规定，现责令你（单位）立即自收到本通知书之日起按下列要求改正：\r\n");
+		content.append("的规定，现责令你（单位）立即自收到本通知书之日起按下列要求改正：\r\n");
 		
 		if (!et_order_correct_7.getText().toString().trim().equals("")){
 			content.append("    1：").append(et_order_correct_7.getText().toString().trim()).append("\r\n\r\n");

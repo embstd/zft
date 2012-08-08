@@ -49,10 +49,10 @@
         <item>金坛市城市管理行政执法支队</item>
         <item>溧阳市城市管理行政执法支队</item>
         <item>常州市城市管理行政执法支队</item>
-        <item>常州市城市管理行政执法支队新北大队</item>
-        <item>常州市城市管理行政执法支队武进大队</item>
-        <item>常州市城市管理行政执法支队钟楼大队</item>
-        <item>常州市城市管理行政执法支队戚墅堰大队</item>
+        <item>常州市新北区城市管理行政执法大队</item>
+        <item>常州市武进区城市管理行政执法大队</item>
+        <item>常州市钟楼区城市管理行政执法大队</item>
+        <item>常州市戚墅堰区城市管理行政执法大队</item>
     </string-array>
     
     <string-array name="cgUnitNameDaDui">

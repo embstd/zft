@@ -286,8 +286,8 @@ public class ActivityFormProvide extends Activity {
 		content.append("    经查，你（单位）于  ").append(tempCase.getThetime())
 		.append("  在  ").append(et_illegal_location.getText().toString().trim())
 		.append("  进行  ").append(et_illegal_behavior.getText().toString().trim())
-		.append("  的行为，现场未能提供相关合法手续，已涉嫌违反 ")
-		.append(tempCase.getFazhe()).append(" 的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
+		.append("  的行为，现场未能提供相关合法手续，已涉嫌违反")
+		.append(tempCase.getFazhe()).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
 		
 		if (Config.cityTag.equals("cztnq") || Config.cityTag.equals("czxbq") || Config.cityTag.equals("czwjq")
 				|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
@@ -304,7 +304,7 @@ public class ActivityFormProvide extends Activity {
 //			content.append(tempCase.getPadd());// 
 //		}
 		content.append(Config.user.getBranch_address());
-		content.append(" ，联系电话：");
+		content.append("，联系电话：");
 		//联系电话
 //		if (type == 0){
 //			content.append(tempCase.getOtel());//
