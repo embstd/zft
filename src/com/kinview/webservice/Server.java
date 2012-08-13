@@ -58,6 +58,156 @@ public class Server {
 		return result.getResultStr();
 	}
 	
+	/**
+	 * 获取广告选项
+	 * @param type
+	 * @return
+	 */
+	public static String GetAdTypeData(String  type) 
+	{
+		CommonResult result =  new CommonResult();
+		String functionName="AndroidGetAdtype";
+		// 加入参数
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		params.put("classid", type);
+		
+		WebService webService = new WebService(functionName,params);
+		SoapObject soapObject;
+		try
+		{
+			soapObject = (SoapObject)webService.CallWebService();
+			result.convertSoapObject(soapObject);
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result.getResultStr();
+	}
+	
+	/**
+	 * 获取广告详细信息
+	 * @param type
+	 * @return
+	 */
+	public static String GetAdInformation(String  code) 
+	{
+		CommonResult result =  new CommonResult();
+		String functionName="AndroidGetQueryAd";
+		// 加入参数
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		params.put("temp", code);
+		
+		WebService webService = new WebService(functionName,params);
+		SoapObject soapObject;
+		try
+		{
+			soapObject = (SoapObject)webService.CallWebService();
+			result.convertSoapObject(soapObject);
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result.getResultStr();
+	}
+	
+	/**
+	 * 获取广告搜索列表
+	 * @param text
+	 * @param address
+	 * @param style
+	 * @param type
+	 * @return
+	 */
+	public String GetAdList(String text,String address, String style, String type)
+	{
+		// TODO Auto-generated method stub
+		CommonResult result =  new CommonResult();
+		String functionName="AndroidGetAd";
+		// 加入参数
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		params.put("txt", text);
+		params.put("stradd", address);
+		params.put("strxs", style);
+		params.put("strtype", type);
+		
+		WebService webService = new WebService(functionName,params);
+		SoapObject soapObject;
+		try
+		{
+			soapObject = (SoapObject)webService.CallWebService();
+			result.convertSoapObject(soapObject);
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result.getResultStr();
+	}
+	
+	public String GetZtcView(String idString)
+	{
+		CommonResult result =  new CommonResult();
+		String functionName="AndroidgetZTCView";
+		// 加入参数
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		params.put("id", idString);
+		
+		WebService webService = new WebService(functionName,params);
+		SoapObject soapObject;
+		try
+		{
+			soapObject = (SoapObject)webService.CallWebService();
+			result.convertSoapObject(soapObject);
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result.getResultStr();
+	}
+	/**
+	 * 获取渣土车搜索列表
+	 * @param number
+	 * @param cut
+	 * @param master
+	 * @param driver
+	 * @param state
+	 * @return
+	 */
+	public String GetZtcList(String number, String cut, String master,
+			String driver, String state)
+	{
+		// TODO Auto-generated method stub
+		CommonResult result =  new CommonResult();
+		String functionName="AndroidgetSearchZTC";
+		// 加入参数
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		params.put("Number", number);
+		params.put("cut", cut);
+		params.put("Master", master);
+		params.put("Driver", driver);
+		params.put("State", state);
+		
+		WebService webService = new WebService(functionName,params);
+		SoapObject soapObject;
+		try
+		{
+			soapObject = (SoapObject)webService.CallWebService();
+			result.convertSoapObject(soapObject);
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result.getResultStr();
+	}
 	
 	
 	/*
@@ -308,4 +458,10 @@ public class Server {
 		result.convertSoapObject(soapObject);
 		return result;
 	}
+
+	
+
+	
+
+	
 }

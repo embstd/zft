@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#fafafa"
+  >
+  
+ <ImageView
+android:id="@+id/ad_search_title_img"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:background="@drawable/title"
+></ImageView>
+    
+
+<TextView
+android:id="@+id/ad_search_title_tv"
+android:text="广告查询"
+android:textSize="38dip"
+android:textColor="#FEFEFE"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="4dip"
+android:layout_centerHorizontal="true"
+android:gravity="center"
+></TextView>
+
+
+
+<TextView 
+	android:id="@+id/ad_search_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="关键字:"
+    android:gravity="left"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_title_img"
+    android:layout_marginTop="7dip"
+    
+/>
+
+<EditText 
+	android:id="@+id/ad_search_et"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_title_img"
+    android:layout_toRightOf="@+id/ad_search_tv"
+/>
+
+<TextView 
+    android:id="@+id/ad_search_tvInfo"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="对象：流水号、申请单位、地点、客户单位、负责人、电话"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_et"
+    android:layout_marginTop="7dip"
+/>
+
+<TextView 
+	android:id="@+id/ad_search_tvSetAdd"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="设置地段:"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_tvInfo"
+    android:layout_marginTop="7dip"
+/>
+
+<Spinner 
+	android:id="@+id/ad_search_spSetAdd"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_tvInfo"
+    android:layout_toRightOf="@+id/ad_search_tvSetAdd"
+/>
+
+
+<TextView 
+	android:id="@+id/ad_search_tvSetAdStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="广告形式:"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_spSetAdd"
+    android:layout_marginTop="7dip"
+/>
+
+<Spinner 
+	android:id="@+id/ad_search_spSetAdStyle"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_spSetAdd"
+    android:layout_toRightOf="@+id/ad_search_tvSetAdStyle"
+/>
+
+
+<TextView 
+	android:id="@+id/ad_search_tvSetAdType"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="广告类别:"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_spSetAdStyle"
+    android:layout_marginTop="7dip"
+/>
+
+<Spinner 
+	android:id="@+id/ad_search_spSetAdType"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ad_search_spSetAdStyle"
+    android:layout_toRightOf="@+id/ad_search_tvSetAdType"
+/>
+
+
+
+<Button 
+	 android:id="@+id/ad_search_btnok"
+	 android:layout_width="110dip" 
+	 android:layout_height="wrap_content"
+     android:text="查询"
+     android:layout_below="@+id/ad_search_spSetAdType"
+     android:layout_marginTop="70dip"
+     android:layout_marginRight="60dip"
+     android:layout_marginLeft="20dip"
+/>
+
+<Button 
+	 android:id="@+id/ad_search_btnBack"
+	 android:layout_width="110dip" 
+	 android:layout_height="wrap_content"
+     android:text="返回 "
+     android:layout_below="@+id/ad_search_spSetAdType"
+     android:layout_marginRight="15dip"
+     android:layout_marginTop="70dip"
+     android:layout_toRightOf="@+id/ad_search_btnok"
+/>
+
+</RelativeLayout>

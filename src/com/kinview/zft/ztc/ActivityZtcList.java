@@ -1,14 +1,6 @@
-package com.kinview.zft.ad;
+package com.kinview.zft.ztc;
 
-import java.security.PrivateKey;
-
-import com.kinview.util.AdService;
-import com.kinview.util.HistoryService;
 import com.kinview.zft.R;
-import com.kinview.zft.history.ActivityHistoryList;
-import com.kinview.zft.history.ActivityHistorySelectItemView;
-import com.sun.org.apache.bcel.internal.generic.LoadClass;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,43 +11,45 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ActivityAdList extends Activity
+
+public class ActivityZtcList extends Activity
 {
-	
-	private String address = "";
-	private String style = "";
-	private String type = "";
-	private String text = "";
+	private String Number = "";
+	private String Cut = "";
+	private String Master = "";
+	private String Driver = "";
+	private String State = "";
 	private ListView listview; // ап╠М
-	private Button button;
-	
+	private Button buttonBack;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.czs_ztclist);
 		Intent it = this.getIntent();
-		address = it.getStringExtra("adaddress");
-		style = it.getStringExtra("adstyle");
-		type = it.getStringExtra("adtype");
-		text = it.getStringExtra("test");
-		setContentView(R.layout.czs_adlist);
-		listview = (ListView)findViewById(R.id.ad_listview);
-		button = (Button)findViewById(R.id.ad_list_back);
+		Number = it.getStringExtra("Number");
+		Cut = it.getStringExtra("Cut");
+		Master = it.getStringExtra("Master");
+		Driver = it.getStringExtra("Driver");
+		State = it.getStringExtra("State");
 		
+		listview = (ListView)findViewById(R.id.ztc_listview);
+		buttonBack = (Button)findViewById(R.id.ztc_lists_back);
+		buttonBack.setOnClickListener(buttonListener);
 		showList();
-		button.setOnClickListener(buttonListener);
+		
 	}
+	
 	
 	private void showList()
 	{
 		// TODO Auto-generated method stub
-		AdAdapter adapter = new AdAdapter(this,text,address,style,type);
+		ZtcAdapter adapter = new ZtcAdapter(this,Number,Cut,Master,Driver,State);
 		listview.setAdapter(adapter.getListAdapter());
         listview.setOnItemClickListener(listitemClickListener);
 		listview.setSelection(0);
 	}
-	
 	
 	ListView.OnItemClickListener listitemClickListener = new ListView.OnItemClickListener()
 	{
@@ -64,10 +58,10 @@ public class ActivityAdList extends Activity
 				long arg3)
 		{
 			// TODO Auto-generated method stub
-			 TextView tv_codeid=(TextView) arg1.findViewById(R.id.czs_ad_listitme_id);
-			 Intent iv = new Intent(ActivityAdList.this,ActivityAdView.class);
+			 TextView tv_ztcid=(TextView) arg1.findViewById(R.id.czs_ztc_listitme_id);
+			 Intent iv = new Intent(ActivityZtcList.this,ActivityZtcView.class);
 			 Bundle bundle = new Bundle();
-		     bundle.putString("codeid", tv_codeid.getText().toString());
+		     bundle.putString("id", tv_ztcid.getText().toString());
 		     iv.putExtras(bundle);
 		     startActivity(iv);
 		}
@@ -85,5 +79,4 @@ public class ActivityAdList extends Activity
 		}
 	};
 	
-   
 }

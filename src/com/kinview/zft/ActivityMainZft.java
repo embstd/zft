@@ -19,17 +19,23 @@ import android.widget.TextView;
 
 import com.kinview.camera.ActivityPhoto;
 import com.kinview.config.Config;
+import com.kinview.config.print;
 import com.kinview.entity.NewCase;
 import com.kinview.setting.ActivitySetting;
+import com.kinview.zft.ad.ActivityAd;
 import com.kinview.zft.casehandle.ActivityCaseHandle;
 import com.kinview.zft.history.ActivityHistoryList;
 import com.kinview.zft.newcase.ActivityNewCaseByOrganise;
+import com.kinview.zft.ztc.ActivityZtc;
 
 public class ActivityMainZft extends Activity
 {
 	private NewCase newcasebyfastphoto = null;
 	private ImageView btn_iv1,btn_iv2,btn_iv3,btn_iv4,btn_iv5;
 	private TextView tv_1,tv_2 ,btn_tv1,btn_tv2;
+	
+	private ImageView btn_ivad_czs,btn_ivztc_czs;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -51,19 +57,25 @@ public class ActivityMainZft extends Activity
 			if(dm.widthPixels == 480 && dm.heightPixels == 800)
 			  {
 				  setContentView(R.layout.jintan_maineasy);
-			  }
+			  }  
 			  else if(dm.widthPixels == 800 && dm.heightPixels == 1280)
 			  {
 				  setContentView(R.layout.jintan_maineasy1280);
 			  }else {
 				  setContentView(R.layout.jintan_maineasy);
 			  }
-			
 		}
 		else if (Config.cityTag.equals("czlys")) 
 		{
 			//溧阳市
 			setContentView(R.layout.liyang_maineasy);
+			  
+		}
+		else if (Config.cityTag.equals("czs")) 
+		{
+			//市支队
+			print.out("加载常州市的Layout");
+			setContentView(R.layout.czs_maineasy);
 			  
 		}
 		else {
@@ -89,6 +101,13 @@ public class ActivityMainZft extends Activity
 		btn_iv4 = (ImageView)findViewById(R.id.itemfastphoto);
 		btn_iv5 = (ImageView)findViewById(R.id.itemsystemset);
 //		btn_iv6 = (ImageView)findViewById(R.id.main_iv6);
+		if (Config.cityTag.equals("czs")) 
+		{
+			btn_ivad_czs=(ImageView)findViewById(R.id.itemad);
+		  
+			btn_ivztc_czs=(ImageView)findViewById(R.id.itemztc);
+		}
+		
 		
 		btn_iv1.setImageResource(R.drawable.easynewcase);
 		btn_iv2.setImageResource(R.drawable.easymycase);
@@ -96,7 +115,12 @@ public class ActivityMainZft extends Activity
 		btn_iv4.setImageResource(R.drawable.easyfastcase);
 		btn_iv5.setImageResource(R.drawable.easysystemset);
 //		btn_iv6.setImageResource(R.drawable.zft_main_6);
-		
+		if (Config.cityTag.equals("czs")) 
+		{
+			btn_ivad_czs.setImageResource(R.drawable.czs_ad);;
+		  
+			btn_ivztc_czs.setImageResource(R.drawable.czs_ztc);
+		}
 		
 		OnTouchListener otl = new OnTouchListener(){
 			@Override
@@ -117,7 +141,9 @@ public class ActivityMainZft extends Activity
 			public void onClick(View v) {
 				if(v.getId() == btn_iv1.getId()){
 					//违章查处
-					Intent it  = new Intent(ActivityMainZft.this,ActivityNewCaseByOrganise.class);
+				Intent it  = new Intent(ActivityMainZft.this,ActivityNewCaseByOrganise.class);
+//					Intent it = new Intent(ActivityMainZft.this, ActivityAd.class);
+//					Intent it = new Intent(ActivityMainZft.this, ActivityZtc.class);
 					startActivity(it);
 				}else if(v.getId() == btn_iv2.getId()){
 					//案件办理
@@ -139,7 +165,16 @@ public class ActivityMainZft extends Activity
 				}else if(v.getId() == btn_tv2.getId()){
 					//系统设置
 					 systemSeting();
+				}else if(v.getId() == btn_ivad_czs.getId()){
+					//广告
+					Intent it = new Intent(ActivityMainZft.this, ActivityAd.class);
+					startActivity(it);
+				}else if(v.getId() == btn_ivztc_czs.getId()){
+					//渣土车
+					Intent it = new Intent(ActivityMainZft.this, ActivityZtc.class);
+					startActivity(it);
 				}
+				
 			}
 		};
 		
@@ -157,9 +192,14 @@ public class ActivityMainZft extends Activity
 		btn_iv3.setOnClickListener(ocl);
 		btn_iv4.setOnClickListener(ocl);
 		btn_iv5.setOnClickListener(ocl);
-//		btn_iv6.setOnClickListener(ocl);
+
 		btn_tv1.setOnClickListener(ocl);
 		btn_tv2.setOnClickListener(ocl);
+		if (Config.cityTag.equals("czs")) 
+		{
+			btn_ivad_czs.setOnClickListener(ocl);
+		    btn_ivztc_czs.setOnClickListener(ocl);
+		}
 		
 	}
 	
@@ -190,7 +230,6 @@ public class ActivityMainZft extends Activity
 		{
 			menu.add(0, 0, 0, "退出").setIcon(R.drawable.newcase_tab3);
 		}
-
 	}
 
 	/**
@@ -198,7 +237,7 @@ public class ActivityMainZft extends Activity
 	 */
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		// Menus.actionMenu(this, null, item.getItemId());
+		// Menus.actionMenu(this, null, item.gvetItemId());
 		actionMenu(this, null, item.getItemId());
 		return super.onOptionsItemSelected(item);
 	}
@@ -209,9 +248,9 @@ public class ActivityMainZft extends Activity
 		{
 			switch (menuId)
 			{
-			case 0: // 退出
-				System.exit(0);
-				break;
+			   case 0: // 退出
+				 System.exit(0);
+				 break;
 			}
 
 		}
@@ -231,6 +270,10 @@ public class ActivityMainZft extends Activity
 		itimg.putExtras(b);
 		startActivityForResult(itimg, 0);
 	}
+	
+	
+	
+	
 	
 	public void systemSeting()
 	{

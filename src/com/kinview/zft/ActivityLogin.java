@@ -89,6 +89,10 @@ public class ActivityLogin extends Activity
 			//溧阳市
 			setContentView(R.layout.liyang_login);
 		}
+		else if (Config.cityTag.equals("czs")) {
+			//市支队
+			setContentView(R.layout.czs_login);
+		}
 		else {
 			//默认
 			setContentView(R.layout.default_login);
@@ -290,8 +294,9 @@ public class ActivityLogin extends Activity
 		print.out(" submit (int times) throws Exception");
 		username = (et_username.getText().toString()).trim();
 		password = (et_password.getText().toString()).trim();
-		Config.tb_typeLingNum = Integer.valueOf(Server.GetDataLingNum());
-
+		
+			Config.tb_typeLingNum = Integer.valueOf(Server.GetDataLingNum());
+		
 		if (username.equals(""))
 		{
 			showToast("s用户名不能为空!");

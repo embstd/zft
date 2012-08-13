@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#fafafa">
+  <RelativeLayout 
+  android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+  >
+  <ImageView
+	android:id="@+id/czs_ad_view_title"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/title"
+	></ImageView>
+	
+	<TextView
+		android:id="@+id/czs_ad_view_tv_title"
+		android:text="详细信息"
+		android:textSize="38dip"
+		android:textColor="#FEFEFE"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="6px"
+		android:layout_centerHorizontal="true"
+		android:gravity="center"
+		></TextView>
+    </RelativeLayout>
+
+  <TextView 
+    android:id="@+id/czs_ad_tv_code_and_isdel"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_applicant"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_phone"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_person"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_address_and_leibie"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_xingshi_and_isurge"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_nature_and_shcc"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_pzrq"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ad_tv_deadline"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <Button 
+  	 android:id="@+id/czs_ad_btnBack"
+  	 android:layout_height="wrap_content"
+  	 android:layout_width="120dip"
+  	 android:text="返回 "
+  	 android:layout_alignParentRight="true"
+  	 android:layout_marginTop="8dip"
+  />
+  
+</LinearLayout>

@@ -387,6 +387,12 @@
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         
+       <activity
+            android:name="com.kinview.zft.ad.ActivityAd"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
         <activity
             android:name="com.kinview.zft.ad.ActivityAdList"
             android:configChanges="orientation|keyboardHidden"
@@ -394,7 +400,26 @@
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
          <activity
-            android:name=".ad.ActivityAdView"
+            android:name="com.kinview.zft.ad.ActivityAdView"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        
+         <activity
+            android:name="com.kinview.zft.ztc.ActivityZtc"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+         <activity
+            android:name="com.kinview.zft.ztc.ActivityZtcList"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+         <activity
+            android:name="com.kinview.zft.ztc.ActivityZtcView"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >

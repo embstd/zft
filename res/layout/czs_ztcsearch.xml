@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#fafafa"
+  >
+  
+ <ImageView
+android:id="@+id/ztc_search_title_Iv"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:background="@drawable/title"
+></ImageView>
+    
+
+<TextView
+android:id="@+id/ztc_search_tv_title"
+android:text="渣土车查询"
+android:textSize="38px"
+android:textColor="#FEFEFE"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="6dip"
+android:layout_centerHorizontal="true"
+android:gravity="center"
+></TextView>
+
+<TextView 
+	android:id="@+id/ztc_carnumber_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="    车牌号码:"
+    android:gravity="left"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_search_title_Iv"
+    android:layout_marginTop="7dip"
+    
+/>
+
+<EditText 
+	android:id="@+id/ztc_carnumber_et"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_search_title_Iv"
+    android:layout_toRightOf="@+id/ztc_carnumber_tv"
+/>
+
+
+<TextView 
+	android:id="@+id/ztc_cutnumber_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="    发动机号:"
+    android:gravity="left"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_carnumber_et"
+    android:layout_marginTop="7dip"
+    
+/>
+
+<EditText 
+	android:id="@+id/ztc_cutnumber_et"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_carnumber_et"
+    android:layout_toRightOf="@+id/ztc_cutnumber_tv"
+/>
+
+
+<TextView 
+	android:id="@+id/ztc_mastername_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="    车主姓名:"
+    android:gravity="left"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_cutnumber_et"
+    android:layout_marginTop="7dip"
+    
+/>
+
+<EditText 
+	android:id="@+id/ztc_mastername_et"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_cutnumber_et"
+    android:layout_toRightOf="@+id/ztc_mastername_tv"
+/>
+
+
+
+<TextView 
+	android:id="@+id/ztc_drivername_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="驾驶员姓名:"
+    android:gravity="left"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_mastername_et"
+    android:layout_marginTop="7dip"
+    
+/>
+
+<EditText 
+	android:id="@+id/ztc_drivername_et"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_mastername_et"
+    android:layout_toRightOf="@+id/ztc_drivername_tv"
+/>
+
+
+<TextView 
+	android:id="@+id/ztc_isdefault_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="    业务状态:"
+    android:gravity="left"
+    android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_drivername_et"
+    android:layout_marginTop="7dip"
+    
+/>
+
+
+<Spinner 
+	android:id="@+id/ztc_isdefault_sp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     android:textColor="@drawable/black"
+    android:layout_below="@+id/ztc_drivername_et"
+    android:layout_toRightOf="@+id/ztc_isdefault_tv"
+/>
+<Button 
+	 android:id="@+id/zfc_search_btnOk"
+	 android:layout_width="110dip" 
+	 android:layout_height="wrap_content"
+     android:text="查询"
+     android:layout_below="@+id/ztc_isdefault_sp"
+     android:layout_marginTop="70dip"
+     android:layout_marginRight="60dip"
+     android:layout_marginLeft="20dip"
+/>
+
+<Button 
+	 android:id="@+id/ztc_search_btnBacks"
+	 android:layout_width="110dip" 
+	 android:layout_height="wrap_content"
+     android:text="返回 "
+     android:layout_below="@+id/ztc_isdefault_sp"
+     android:layout_marginRight="15dip"
+     android:layout_marginTop="70dip"
+     android:layout_toRightOf="@+id/zfc_search_btnOk"
+/>
+
+</RelativeLayout>

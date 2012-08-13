@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#fafafa">
+  <RelativeLayout 
+  android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+  >
+  <ImageView
+	android:id="@+id/czs_ztc_view_title"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/title"
+	></ImageView>
+	
+	<TextView
+		android:id="@+id/czs_ztc_view_tv_title"
+		android:text="详细信息"
+		android:textSize="38dip"
+		android:textColor="#FEFEFE"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="6px"
+		android:layout_centerHorizontal="true"
+		android:gravity="center"
+		></TextView>
+    </RelativeLayout>
+
+  <TextView 
+    android:id="@+id/czs_ztc_tv_number"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ztc_tv_cut"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ztc_tv_master"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ztc_tv_driver"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ztc_tv_install"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ztc_tv_isdefault"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  <TextView 
+    android:id="@+id/czs_ztc_tv_fdjh"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	android:textColor="#000000"
+  	android:textSize="20dip"
+  	android:layout_marginTop="8dip"
+  />
+  
+  
+  
+  <Button 
+  	 android:id="@+id/czs_ztc_btnBack"
+  	 android:layout_height="wrap_content"
+  	 android:layout_width="120dip"
+  	 android:text="返回"
+  	 android:layout_marginTop="85dip"
+  	 android:layout_marginLeft="175dip"
+  />
+  
+</LinearLayout>

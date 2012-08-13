@@ -89,17 +89,17 @@ public class ActivityHistoryList extends Activity
 
 	Button.OnClickListener onClickListenerback = new OnClickListener()
 	{
-
-		@Override
-		public void onClick(View v)
-		{
-			// TODO Auto-generated method stub
-			finish();
-		}
+     
+	 	@Override
+	 	public void onClick(View v)
+	 	{
+	 		// TODO Auto-generated method stub
+	 		finish();
+	 	}
 	};
 
 	Button.OnClickListener onClickListenerclear = new OnClickListener()
-	{
+	{                          
 
 		@Override
 		public void onClick(View v)
@@ -124,19 +124,18 @@ public class ActivityHistoryList extends Activity
 	{
         @Override
 		public void onClick(DialogInterface dialog, int which)
-		{
+        {
 			// TODO Auto-generated method stub
 			clear();
 //			finish();
 			HistoryService service2 = new HistoryService(contextsContext, sp_state);
-//			//jiazai  shu ju
+//			//加载数据
 			service2.getItemsForList(HistoryService.list,sp_state);
 			listview.setAdapter(service2.getListAdapter());
 	        listview.setOnItemClickListener(listitemClickListener);
 			listview.setSelection(0);
 		}
 
-		
 	};
 
 	DialogInterface.OnClickListener onClickListenerCancel = new DialogInterface.OnClickListener()
@@ -232,8 +231,6 @@ public class ActivityHistoryList extends Activity
 	{
 		try
 		{
-			
-			
 			print.out("ReList下state="+sp_state);
 			HistoryService service1 = new HistoryService(this,state);
 			//jiazai  shu ju

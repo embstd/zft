@@ -257,7 +257,6 @@ public class ActivityNewCaseByOrganise extends Activity
 	 */
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		
 		// Menus.actionMenu(this, null, item.getItemId());
 		actionMenu(this, null, item.getItemId());
 		return super.onOptionsItemSelected(item);
@@ -265,7 +264,6 @@ public class ActivityNewCaseByOrganise extends Activity
 
 	public void actionMenu(Context context, Handler mHandler, int menuId)
 	{
-		
 		if (context.getClass().equals(ActivityNewCaseByOrganise.class))
 		{
 			switch (menuId)
