@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kinview.zft"
     android:versionCode="1"
-    android:versionName="2.0" >
+    android:versionName="2.4" >
     
     <supports-screens android:largeScreens="true" android:anyDensity="true"/>
 
@@ -109,56 +109,56 @@
             android:name=".casehandle.ActivityFormSiteRecord"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormSiteRecordInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormSiteRecordSituation"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormVerification"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormEvidence"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormEvidenceReg"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormEvidenceInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormOrderCorrect"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormEvidenceInfoListView"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name="com.kinview.zft.newcase.ActivityNewCaseByOrganise"
@@ -233,158 +233,158 @@
             android:name=".casehandle.ActivitySongdaHuizheng"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormOrderStop"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormStopIllegal"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormPublishBeforNotice"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormPublishHearingNotice"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormRemoveOrderStop"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormPublishDetermin"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormSitePublishDetermin"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivitySurveyAskRecord"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormWitnessRecored"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivitySurveyAskRecordBaseInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivitySurveyAskRecordOtherInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormWitnessRecoredBaseInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormWitnessRecoredOtherInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormSitePublishDeterminInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormSitePublishDeterminSituation"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormPublishDeterminInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormPublishDeterminSituation"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormEvidenceRegSiteRecord"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
         <activity
             android:name=".casehandle.ActivityFormDetainDetermin"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormDetainDeterminInfo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormDetainDeterminInfoListView"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormDetainDeterminReg"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         <activity
             android:name=".casehandle.ActivityFormDetainSiteRecord"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
         
        <activity

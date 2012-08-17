@@ -394,7 +394,7 @@ public class ActivityNewCaseByPerson extends Activity
 	private void Submit() throws Exception
 	{
 		// TODO Auto-generated method stub
-		
+		String IDnum = ncp_etIDnumber.getText().toString();
 		if (ncp_etName.getText().length() == 0)
 		{
 			showToast("请填写姓名!");
@@ -411,6 +411,18 @@ public class ActivityNewCaseByPerson extends Activity
 		{
 			showToast("案发地点和案发时间不能为空！");
 			return;
+		}
+		if(IDnum.length()>0)
+		{
+			if(IDnum.length()<17)
+			{
+				showToast("身份证号码格式不正确！");
+				return;
+			}
+			if(IDnum.length() == 17)
+			{
+				IDnum = IDnum +"X";
+			}
 		}
 		newcasebyperson.setState(1);
 		newcasebyperson.setFromtype(spCasely.getSelectedItemPosition()+1);

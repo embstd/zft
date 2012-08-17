@@ -48,12 +48,14 @@ public class ActivityFormSiteRecordSituation extends Activity {
 	private TextView tv_record_conditions_3;
 	private TextView tv_record_conditions_4;
 	private TextView tv_record_conditions_5;
+	private TextView tv_record_conditions_6;
 	
 	private EditText et_record_conditions_1;
 	private EditText et_record_conditions_2;
 	private EditText et_record_conditions_3;
 	private EditText et_record_conditions_4;
 	private EditText et_record_conditions_5;
+	private EditText et_record_conditions_6;
 	
 //	private int caseId;
 //	private String formContent;
@@ -111,7 +113,7 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		lockEditText(et_record_conditions_3);
 		lockEditText(et_record_conditions_4);
 		lockEditText(et_record_conditions_5);
-		
+		lockEditText(et_record_conditions_6);
 	}
 	//已上报案件 所有信息不可修改
 	private void lockEditText(EditText et){
@@ -143,12 +145,16 @@ public class ActivityFormSiteRecordSituation extends Activity {
 			}
 		}
 		
-		
-		et_record_conditions_1.setText(year + "年" + month + "月" + day + "日"
+		/**
+		 * 1.2012年7月23日本局执法人员现场亮证(执法证号:04001344、04008089)巡查时发现该当事人在常州市北塘河路龙湖郦城工程建设中,运输土方车辆车轮带泥行驶,造成北塘河路道路污染. 
+		 * 2.经现场测量,该当事人道路污染面积为50平方米. 
+		 * 3执法人员现场拍照取证后发出编号为NO:2012000542的核查通知书,现场责令当事人停止上述行为并立即整改.
+		 */
+		et_record_conditions_1.setText("    1."+year + "年" + month + "月" + day + "日"
 				+ "，执法人员 "+Config.user.getName()+"、"+Config.user.getU_UserName()
 				+"（证号："+Config.user.getZfzid()+"、"+Config.user.getU_ZfzID()+"）巡查至"
 				+Config.currentNewCaseList.get(0).getAddress()+" 时，发现该当事人"
-				+Config.currentNewCaseList.get(0).getCaseWeiFaXW()+" 。执法人员亮证检查，当事人现场未能提供任何合法、有效手续。执法人员拍照取证。");
+				+Config.currentNewCaseList.get(0).getCaseWeiFaXW()+" 。\r\n" +"    2.执法人员亮证检查，当事人现场未能提供任何合法、有效手续。\r\n" +"    3.执法人员拍照取证。");
 		et_record_conditions_2.setText("阴影部分所示即为违章地点");
 		et_record_conditions_3.setText(Config.timebyYMDHMS());
 		et_record_conditions_4.setText("↑北");
@@ -255,12 +261,14 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		tv_record_conditions_3 = (TextView)this.findViewById(R.id.record_conditions_3_name);
 		tv_record_conditions_4 = (TextView)this.findViewById(R.id.record_conditions_4_name);
 		tv_record_conditions_5 = (TextView)this.findViewById(R.id.record_conditions_5_name);
+		tv_record_conditions_6 = (TextView)this.findViewById(R.id.record_conditions_6_name);
 		
 		et_record_conditions_1 = (EditText)this.findViewById(R.id.record_conditions_1_name_txt);
 		et_record_conditions_2 = (EditText)this.findViewById(R.id.record_conditions_2_name_txt);
 		et_record_conditions_3 = (EditText)this.findViewById(R.id.record_conditions_3_name_txt);
 		et_record_conditions_4 = (EditText)this.findViewById(R.id.record_conditions_4_name_txt);
 		et_record_conditions_5 = (EditText)this.findViewById(R.id.record_conditions_5_name_txt);
+		et_record_conditions_6 = (EditText)this.findViewById(R.id.record_conditions_6_name_txt);
 		
 		tv_form_title_all_2.setText(Config.cgUnitName);
 	}
@@ -307,8 +315,8 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		
 		content.append("现场勘察示意图:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n");//15行
 		
-		content.append(tv_record_conditions_1.getText().toString().trim().replaceAll("_", ""))
-		.append(et_record_conditions_1.getText().toString().trim().replaceAll("_", "")).append("\r\n")
+		content.append(tv_record_conditions_1.getText().toString().trim().replaceAll("_", "")).append("\r\n")
+		.append("    "+et_record_conditions_1.getText().toString().trim().replaceAll("_", "")).append("\r\n")
 		.append(tv_record_conditions_2.getText().toString().trim().replaceAll("_", ""))
 		.append(et_record_conditions_2.getText().toString().trim().replaceAll("_", "")).append("\r\n")
 		.append(tv_record_conditions_3.getText().toString().trim().replaceAll("_", ""))
@@ -316,14 +324,16 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		.append(tv_record_conditions_4.getText().toString().trim().replaceAll("_", ""))
 		.append(et_record_conditions_4.getText().toString().trim().replaceAll("_", "")).append("\r\n")
 		.append(tv_record_conditions_5.getText().toString().trim().replaceAll("_", ""))
-		.append(et_record_conditions_5.getText().toString().trim().replaceAll("_", "")).append("\r\n");
+		.append(et_record_conditions_5.getText().toString().trim().replaceAll("_", "")).append("\r\n")
+		.append(tv_record_conditions_6.getText().toString().trim().replaceAll("_", ""))
+		.append(et_record_conditions_6.getText().toString().trim().replaceAll("_", "")).append("\r\n");
 		
 		content.append("当事人签名:").append("\r\n\r\n\r\n");
-		content.append("检查人员签名:").append("\r\n\r\n\r\n");
-		content.append("见证人签名:").append("_").append("\r\n\r\n\r\n");
+		content.append("见证人签名:").append("\r\n\r\n\r\n");
+		content.append("检查人员签名:").append("_").append("\r\n\r\n\r\n");
 		
 		//年月日
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		return content.toString();
@@ -341,7 +351,9 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		.append(tv_record_conditions_4.getText().toString().trim().replaceAll("_", "")).append("_")
 		.append(et_record_conditions_4.getText().toString().trim().replaceAll("_", "")).append("_")
 		.append(tv_record_conditions_5.getText().toString().trim().replaceAll("_", "")).append("_")
-		.append(et_record_conditions_5.getText().toString().trim().replaceAll("_", "")).append("_");
+		.append(et_record_conditions_5.getText().toString().trim().replaceAll("_", "")).append("_")
+		.append(tv_record_conditions_6.getText().toString().trim().replaceAll("_", "")).append("_")
+		.append(et_record_conditions_6.getText().toString().trim().replaceAll("_", "")).append("_");
 		return content.toString();
 //		return Html.fromHtml(content.toString()).toString();
 	}
@@ -391,7 +403,8 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		.append(et_record_conditions_2.getText().toString().trim().replaceAll("_", "")).append("_")
 		.append(et_record_conditions_3.getText().toString().trim().replaceAll("_", "")).append("_")
 		.append(et_record_conditions_4.getText().toString().trim().replaceAll("_", "")).append("_")
-		.append(et_record_conditions_5.getText().toString().trim().replaceAll("_", ""));
+		.append(et_record_conditions_5.getText().toString().trim().replaceAll("_", "")).append("_")
+		.append(et_record_conditions_6.getText().toString().trim().replaceAll("_", ""));
 		return content.toString();
 //		return Html.fromHtml(content.toString()).toString();
 	}

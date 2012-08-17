@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">执法通</string>
-    <string name="current_city">czs</string>
+    <string name="current_city">cztnq</string>
     
     <string name="form_title_all_name">常州市天宁区城市管理行政执法支队</string>
     <string name="form_title_1_name">限期提供合法手续通知书</string>
     <string name="form_title_2_name">现场检查笔录</string>
-    <string name="form_title_3_name">核查通知书</string>
+    <string name="form_title_3_name">停工（核查）通知书</string>
     <string name="form_title_4_name">证据先行登记保存通知书</string>
     <string name="form_title_5_name">责令改正通知书</string>
     <string name="form_title_6_name">送达回证</string>
@@ -46,10 +46,11 @@
     
     <!-- 记录情况 -->
     <string name="form_record_conditions_1_name">现场检查记录情况:</string>
-    <string name="form_record_conditions_2_name">现场勘察示意图说明:</string>
-    <string name="form_record_conditions_3_name">检查时间:</string>
+    <string name="form_record_conditions_2_name">示意图说明:</string>
+    <string name="form_record_conditions_3_name">时间:</string>
     <string name="form_record_conditions_4_name">方位:</string>
     <string name="form_record_conditions_5_name">绘制人姓名和身份:</string>
+    <string name="form_record_conditions_6_name">需要说明内容:</string>
     
     <!-- 停工(核查)通知书 -->
     <string name="form_verification_notice_1_name">通知单位:</string>
@@ -65,8 +66,8 @@
     <string name="form_verification_notice_11_name">调查处理材料:</string>
     <string name="form_verification_notice_12_name">上述行为的书面情况说明;</string>
     <string name="form_verification_notice_13_name">经办人身份证明;</string>
-    <string name="form_verification_notice_14_name">企业营业执照。</string>
-    <string name="form_verification_notice_15_name">其它相关材料。</string>
+    <string name="form_verification_notice_14_name">企业营业执照;</string>
+    <string name="form_verification_notice_15_name">其它相关材料;</string>
     
     <!-- 证据先行登记保存通知书  基本信息-->
     <string name="form_evidence_registration_1_name">通知单位:</string>

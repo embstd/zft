@@ -446,27 +446,31 @@ public class ActivityFormVerification extends Activity {
 		content.append(et_verification_notice_8.getText().toString().trim());
 		content.append("（地址： ").append(et_verification_notice_9.getText().toString().trim())
 		.append(", 联系电话：").append(et_verification_notice_10.getText().toString().trim());
-		content.append("）\r\n\r\n接受调查处理： \r\n");
+		content.append("）接受调查处理： \r\n");
 //		content.append(tv_verification_notice_12.getText().toString().trim());
 		if (!et_verification_notice_12.getText().toString().trim().equals("")){
-			content.append("1: ").append(et_verification_notice_12.getText().toString().trim()).append("\r\n");
+			content.append("1. ").append(et_verification_notice_12.getText().toString().trim()).append("\r\n");
 		}
 		if (!et_verification_notice_13.getText().toString().trim().equals("")) {
-			content.append("2: ").append(et_verification_notice_13.getText().toString().trim()).append("\r\n");
+			content.append("2. ").append(et_verification_notice_13.getText().toString().trim()).append("\r\n");
 		}
 		if (!et_verification_notice_14.getText().toString().trim().equals("")) {
-			content.append("3: ").append(et_verification_notice_14.getText().toString().trim()).append("\r\n");
+			content.append("3. ").append(et_verification_notice_14.getText().toString().trim()).append("\r\n");
 		}
 		if (!et_verification_notice_15.getText().toString().trim().equals("")) {
-			content.append("4: ").append(et_verification_notice_15.getText().toString().trim()).append("\r\n");
+			content.append("4. ").append(et_verification_notice_15.getText().toString().trim()).append("\r\n");
 		}
 		if (!et_verification_notice_16.getText().toString().trim().equals("")) {
-			content.append("5: ").append(et_verification_notice_16.getText().toString().trim()).append("\r\n");
+			content.append("5. ").append(et_verification_notice_16.getText().toString().trim()).append("\r\n");
 		}
+		
+		content.append("\r\n逾期不接受调查或继续上述行为的，本机关将依法查处。\r\n\r\n\r\n");
+		content.append("特此通知。\r\n");
+		
 		content.append("当事人签名:\r\n\r\n\r\n");
 		content.append("执法人员签名:\r\n\r\n\r\n");
 		content.append("见证人签名:\r\n\r\n\r\n");
-		content.append("逾期不接受调查或继续上述行为的，本机关将依法查处。\r\n");
+		
 		//地址
 		
 		content.append("_");
