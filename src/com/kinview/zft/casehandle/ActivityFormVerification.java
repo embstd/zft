@@ -275,7 +275,14 @@ public class ActivityFormVerification extends Activity {
 				|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
 			et_verification_notice_8.setText(Config.cgUnitNameZhiDui);//部门
 		}else {
-			et_verification_notice_8.setText(Config.user.getBranch_name());//部门
+			if (Config.cityTag.equals("czs")){
+				et_verification_notice_8.setText("支队受理指挥中心");//部门
+			}else if (Config.cityTag.equals("czjts")){
+				et_verification_notice_8.setText("金坛市城市管理行政执法大队" + Config.user.getBranch_name());//部门
+			}else{
+				et_verification_notice_8.setText(Config.user.getBranch_name());//部门
+			}
+			
 		}
 		
 		et_verification_notice_9.setText(Config.user.getBranch_address());//地址
@@ -403,6 +410,18 @@ public class ActivityFormVerification extends Activity {
 		et_verification_notice_16 = (EditText)this.findViewById(R.id.verification_notice_16_name_txt);
 		
 		tv_form_title_all_3.setText(Config.cgUnitName);
+		
+		if (Config.cityTag.equals("czs")){
+			et_verification_notice_12.setText("上述行为的书面情况说明;");
+			et_verification_notice_13.setText("营业执照和组织机构代码证复印件;");
+			et_verification_notice_14.setText("《授权委托书》和被委托授权人的相关身份证明;");
+			et_verification_notice_15.setText("");
+		}else if (Config.cityTag.equals("czjts")){
+			et_verification_notice_12.setText("上述行为的书面情况说明;");
+			et_verification_notice_13.setText("相关身份证明资料及复印件;");
+			et_verification_notice_14.setText("营业执照及其复印件;");
+//			et_verification_notice_15.setText("");
+		}
 	}
 	
 	private String getFormContent(){
@@ -428,55 +447,109 @@ public class ActivityFormVerification extends Activity {
 		
 		
 		StringBuffer content = new StringBuffer();
-		content.append(tv_form_title_all_3.getText().toString().trim()).append("\r\n");
-		content.append(tv_form_title_3.getText().toString().trim()).append("_");
-//		content.append(tempform.getFormName()).append("_");
-		content.append(Config.posFormTitle +"执核字[").append(String.valueOf(year1)).append("]  \r\nNo.")
-		.append(tempCase.getLsh()).append("_");
-		content.append(et_verification_notice_1.getText().toString().trim()).append(":\r\n\r\n");
-		content.append("    经查，你（单位）于").append(et_verification_notice_2.getText().toString().trim())
-		.append("，在").append(et_verification_notice_3.getText().toString().trim())
-		.append("，进行").append(et_verification_notice_4.getText().toString().trim())
-		.append("的行为，已涉嫌违反")
-		.append(tempCase.getYiju()).append("之规定.\r\n    ");//分段
-		content.append("因你（单位）未能提供上述行为之合法依据，现责令你（单位）自接到本通知之日起，立即停止上述行为，并于");
-		content.append(String.valueOf(mYear)).append(" 年 ");
-		content.append(String.valueOf(mMonth+1)).append(" 月 ");
-		content.append(String.valueOf(mDay)).append(" 日前，携带下列材料到");
-		content.append(et_verification_notice_8.getText().toString().trim());
-		content.append("（地址： ").append(et_verification_notice_9.getText().toString().trim())
-		.append(", 联系电话：").append(et_verification_notice_10.getText().toString().trim());
-		content.append("）接受调查处理： \r\n");
-//		content.append(tv_verification_notice_12.getText().toString().trim());
-		if (!et_verification_notice_12.getText().toString().trim().equals("")){
-			content.append("1. ").append(et_verification_notice_12.getText().toString().trim()).append("\r\n");
-		}
-		if (!et_verification_notice_13.getText().toString().trim().equals("")) {
-			content.append("2. ").append(et_verification_notice_13.getText().toString().trim()).append("\r\n");
-		}
-		if (!et_verification_notice_14.getText().toString().trim().equals("")) {
-			content.append("3. ").append(et_verification_notice_14.getText().toString().trim()).append("\r\n");
-		}
-		if (!et_verification_notice_15.getText().toString().trim().equals("")) {
-			content.append("4. ").append(et_verification_notice_15.getText().toString().trim()).append("\r\n");
-		}
-		if (!et_verification_notice_16.getText().toString().trim().equals("")) {
-			content.append("5. ").append(et_verification_notice_16.getText().toString().trim()).append("\r\n");
+		if (Config.cityTag.equals("czjts")){//金坛市
+			content.append(tv_form_title_all_3.getText().toString().trim()).append("\r\n");
+			content.append(tv_form_title_3.getText().toString().trim()).append("_");
+//			content.append(tempform.getFormName()).append("_");
+			content.append(Config.posFormTitle +"执核字[").append(String.valueOf(year1)).append("]  \r\nNo.")
+			.append(tempCase.getLsh()).append("_");
+			content.append(et_verification_notice_1.getText().toString().trim()).append(":\r\n\r\n");
+			content.append("    经查，你（单位）于").append(et_verification_notice_2.getText().toString().trim())
+			.append("，在").append(et_verification_notice_3.getText().toString().trim())
+			.append("，进行").append(et_verification_notice_4.getText().toString().trim())
+			.append("的行为，因该行为需取得相关行政许可方可进行，而你（单位）未能提供进行上述行为的合法依据，")
+			.append("现责令你（单位）自接到本通知之日起，立即停止上述行为，并于");
+			content.append(String.valueOf(mYear)).append(" 年 ");
+			content.append(String.valueOf(mMonth+1)).append(" 月 ");
+			content.append(String.valueOf(mDay)).append(" 日前，携带下列材料到");
+			content.append(et_verification_notice_8.getText().toString().trim());
+			content.append("（地址： ").append(et_verification_notice_9.getText().toString().trim())
+			.append(", 联系电话：").append(et_verification_notice_10.getText().toString().trim());
+			content.append("）接受调查处理： \r\n");
+//			content.append(tv_verification_notice_12.getText().toString().trim());
+			if (!et_verification_notice_12.getText().toString().trim().equals("")){
+				content.append("1. ").append(et_verification_notice_12.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_13.getText().toString().trim().equals("")) {
+				content.append("2. ").append(et_verification_notice_13.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_14.getText().toString().trim().equals("")) {
+				content.append("3. ").append(et_verification_notice_14.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_15.getText().toString().trim().equals("")) {
+				content.append("4. ").append(et_verification_notice_15.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_16.getText().toString().trim().equals("")) {
+				content.append("5. ").append(et_verification_notice_16.getText().toString().trim()).append("\r\n");
+			}
+			
+			content.append("\r\n逾期不接受调查或继续上述行为的，本机关将依法查处。\r\n\r\n\r\n");
+			content.append("特此通知。\r\n");
+			
+			content.append("当事人签名:\r\n\r\n\r\n");
+			content.append("电话:\r\n\r\n\r\n");
+			content.append("执法人员签名:\r\n\r\n\r\n");
+			content.append("见证人签名:\r\n\r\n\r\n");
+			
+			//地址
+			
+			content.append("_");
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
+			content.append(String.valueOf(month1)).append(" 月 ");
+			content.append(String.valueOf(day1)).append(" 日");
+		}else {
+			content.append(tv_form_title_all_3.getText().toString().trim()).append("\r\n");
+			content.append(tv_form_title_3.getText().toString().trim()).append("_");
+//			content.append(tempform.getFormName()).append("_");
+			content.append(Config.posFormTitle +"执核字[").append(String.valueOf(year1)).append("]  \r\nNo.")
+			.append(tempCase.getLsh()).append("_");
+			content.append(et_verification_notice_1.getText().toString().trim()).append(":\r\n\r\n");
+			content.append("    经查，你（单位）于").append(et_verification_notice_2.getText().toString().trim())
+			.append("，在").append(et_verification_notice_3.getText().toString().trim())
+			.append("，进行").append(et_verification_notice_4.getText().toString().trim())
+			.append("的行为，已涉嫌违反")
+			.append(tempCase.getYiju()).append("之规定.\r\n    ");//分段
+			content.append("因你（单位）未能提供上述行为之合法依据，现责令你（单位）自接到本通知之日起，立即停止上述行为，并于");
+			content.append(String.valueOf(mYear)).append(" 年 ");
+			content.append(String.valueOf(mMonth+1)).append(" 月 ");
+			content.append(String.valueOf(mDay)).append(" 日前，携带下列材料到");
+			content.append(et_verification_notice_8.getText().toString().trim());
+			content.append("（地址： ").append(et_verification_notice_9.getText().toString().trim())
+			.append(", 联系电话：").append(et_verification_notice_10.getText().toString().trim());
+			content.append("）接受调查处理： \r\n");
+//			content.append(tv_verification_notice_12.getText().toString().trim());
+			if (!et_verification_notice_12.getText().toString().trim().equals("")){
+				content.append("1. ").append(et_verification_notice_12.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_13.getText().toString().trim().equals("")) {
+				content.append("2. ").append(et_verification_notice_13.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_14.getText().toString().trim().equals("")) {
+				content.append("3. ").append(et_verification_notice_14.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_15.getText().toString().trim().equals("")) {
+				content.append("4. ").append(et_verification_notice_15.getText().toString().trim()).append("\r\n");
+			}
+			if (!et_verification_notice_16.getText().toString().trim().equals("")) {
+				content.append("5. ").append(et_verification_notice_16.getText().toString().trim()).append("\r\n");
+			}
+			
+			content.append("\r\n逾期不接受调查或继续上述行为的，本机关将依法查处。\r\n\r\n\r\n");
+			content.append("特此通知。\r\n");
+			
+			content.append("当事人签名:\r\n\r\n\r\n");
+			content.append("电话:\r\n\r\n\r\n");
+			content.append("执法人员签名:\r\n\r\n\r\n");
+			content.append("见证人签名:\r\n\r\n\r\n");
+			
+			//地址
+			
+			content.append("_");
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
+			content.append(String.valueOf(month1)).append(" 月 ");
+			content.append(String.valueOf(day1)).append(" 日");
 		}
 		
-		content.append("\r\n逾期不接受调查或继续上述行为的，本机关将依法查处。\r\n\r\n\r\n");
-		content.append("特此通知。\r\n");
-		
-		content.append("当事人签名:\r\n\r\n\r\n");
-		content.append("执法人员签名:\r\n\r\n\r\n");
-		content.append("见证人签名:\r\n\r\n\r\n");
-		
-		//地址
-		
-		content.append("_");
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
-		content.append(String.valueOf(month1)).append(" 月 ");
-		content.append(String.valueOf(day1)).append(" 日");
 		return content.toString();
 //		return Html.fromHtml(content.toString()).toString();
 	}

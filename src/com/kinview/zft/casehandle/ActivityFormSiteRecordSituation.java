@@ -150,15 +150,35 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		 * 2.经现场测量,该当事人道路污染面积为50平方米. 
 		 * 3执法人员现场拍照取证后发出编号为NO:2012000542的核查通知书,现场责令当事人停止上述行为并立即整改.
 		 */
-		et_record_conditions_1.setText("    1."+year + "年" + month + "月" + day + "日"
-				+ "，执法人员 "+Config.user.getName()+"、"+Config.user.getU_UserName()
-				+"（证号："+Config.user.getZfzid()+"、"+Config.user.getU_ZfzID()+"）巡查至"
-				+Config.currentNewCaseList.get(0).getAddress()+" 时，发现该当事人"
-				+Config.currentNewCaseList.get(0).getCaseWeiFaXW()+" 。\r\n" +"    2.执法人员亮证检查，当事人现场未能提供任何合法、有效手续。\r\n" +"    3.执法人员拍照取证。");
-		et_record_conditions_2.setText("阴影部分所示即为违章地点");
-		et_record_conditions_3.setText(Config.timebyYMDHMS());
-		et_record_conditions_4.setText("↑北");
-		et_record_conditions_5.setText("行政执法人员  "+Config.name);
+		if (Config.cityTag.equals("czs")){//大市
+			et_record_conditions_1.setText("\r\n    1." + year + "年" + month + "月" + day + "日" 
+					+ "本局执法人员" 
+					+ "现场亮证(执法证号:" + Config.user.getZfzid() + "、" + Config.user.getU_ZfzID() + ")巡查时发现该当事人在" 
+					+Config.currentNewCaseList.get(0).getAddress() + Config.currentNewCaseList.get(0).getCaseAnYou() + ",造成    路道路污染."
+			+"\r\n    2.经现场检查该当事人未能提供相关手续."
+            +"\r\n    3.经现场测量,该当事人道路污染面积为     平方米."
+            +"\r\n    4.执法人员现场拍照取证后发出编号为NO:"+Config.currentNewCaseList.get(0).getLsh()+"的核查通知书,现场责令当事人停止上述行为并立即整改.");
+			
+//			et_record_conditions_1.setText("    1."+year + "年" + month + "月" + day + "日"
+//					+ "本局执法人员 现场亮证"
+//					+"（执法证号："+Config.user.getZfzid()+"、"+Config.user.getU_ZfzID()+"）巡查时发现该当事人在"
+//					+Config.currentNewCaseList.get(0).getAddress()+" 时，发现该当事人"
+//					+Config.currentNewCaseList.get(0).getCaseWeiFaXW()+" 。\r\n" +"    2.执法人员亮证检查，当事人现场未能提供任何合法、有效手续。\r\n" +"    3.执法人员拍照取证。");
+			et_record_conditions_2.setText("");
+			et_record_conditions_3.setText(Config.timebyYMDHMS());
+			et_record_conditions_4.setText("上北下南");
+			et_record_conditions_5.setText("");
+		}else {
+			et_record_conditions_1.setText("    1."+year + "年" + month + "月" + day + "日"
+					+ "，执法人员 "+Config.user.getName()+"、"+Config.user.getU_UserName()
+					+"（证号："+Config.user.getZfzid()+"、"+Config.user.getU_ZfzID()+"）巡查至"
+					+Config.currentNewCaseList.get(0).getAddress()+" 时，发现该当事人"
+					+Config.currentNewCaseList.get(0).getCaseWeiFaXW()+" 。\r\n" +"    2.执法人员亮证检查，当事人现场未能提供任何合法、有效手续。\r\n" +"    3.执法人员拍照取证。");
+			et_record_conditions_2.setText("阴影部分所示即为违章地点");
+			et_record_conditions_3.setText(Config.timebyYMDHMS());
+			et_record_conditions_4.setText("↑北");
+			et_record_conditions_5.setText("行政执法人员  "+Config.name);
+		}
 	}
 	
 	private Handler myHandler = new Handler(){
@@ -315,8 +335,8 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		
 		content.append("现场勘察示意图:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n");//15行
 		
-		content.append(tv_record_conditions_1.getText().toString().trim().replaceAll("_", "")).append("\r\n")
-		.append("    "+et_record_conditions_1.getText().toString().trim().replaceAll("_", "")).append("\r\n")
+		content.append(tv_record_conditions_1.getText().toString().trim().replaceAll("_", ""))
+		.append(et_record_conditions_1.getText().toString().replaceAll("_", "")).append("\r\n")
 		.append(tv_record_conditions_2.getText().toString().trim().replaceAll("_", ""))
 		.append(et_record_conditions_2.getText().toString().trim().replaceAll("_", "")).append("\r\n")
 		.append(tv_record_conditions_3.getText().toString().trim().replaceAll("_", ""))
@@ -333,7 +353,7 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		content.append("检查人员签名:").append("_").append("\r\n\r\n\r\n");
 		
 		//年月日
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		return content.toString();
@@ -343,7 +363,7 @@ public class ActivityFormSiteRecordSituation extends Activity {
 	private String getFormContentWhenPause(){
 		StringBuffer content = new StringBuffer();
 		content.append(tv_record_conditions_1.getText().toString().trim().replaceAll("_", "")).append("_")
-		.append(et_record_conditions_1.getText().toString().trim().replaceAll("_", "")).append("_")
+		.append(et_record_conditions_1.getText().toString().replaceAll("_", "")).append("_")
 		.append(tv_record_conditions_2.getText().toString().trim().replaceAll("_", "")).append("_")
 		.append(et_record_conditions_2.getText().toString().trim().replaceAll("_", "")).append("_")
 		.append(tv_record_conditions_3.getText().toString().trim().replaceAll("_", "")).append("_")

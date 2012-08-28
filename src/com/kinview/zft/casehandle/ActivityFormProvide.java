@@ -277,51 +277,74 @@ public class ActivityFormProvide extends Activity {
 		}
 		
 		StringBuffer content = new StringBuffer();
-		content.append(tv_form_title_all.getText().toString().trim()).append("\r\n");
-		content.append(tv_form_title.getText().toString().trim()).append("_");
-//		content.append(tempform.getFormName()).append("_");
-		content.append(Config.posFormTitle +"执通字[").append(String.valueOf(year)).append("]  \r\nNo.")
-		.append(tempCase.getLsh()).append("_");
-		content.append(et_notification_nuit.getText().toString().trim()).append(":\r\n\r\n");
-		content.append("    经查，你（单位）于  ").append(tempCase.getThetime())
-		.append("  在  ").append(et_illegal_location.getText().toString().trim())
-		.append("  进行  ").append(et_illegal_behavior.getText().toString().trim())
-		.append("  的行为，现场未能提供相关合法手续，已涉嫌违反")
-		.append(tempCase.getFazhe()).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
-		
-		if (Config.cityTag.equals("cztnq") || Config.cityTag.equals("czxbq") || Config.cityTag.equals("czwjq")
-				|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
-			content.append(Config.cgUnitNameZhiDui);//部门
+		if (Config.cityTag.equals("czjts")){//金坛市
+			content.append(tv_form_title_all.getText().toString().trim()).append("\r\n");
+			content.append(tv_form_title.getText().toString().trim()).append("_");
+//			content.append(tempform.getFormName()).append("_");
+			content.append(Config.posFormTitle +"执通字[").append(String.valueOf(year)).append("]  \r\nNo.")
+			.append(tempCase.getLsh()).append("_");
+			content.append(et_notification_nuit.getText().toString().trim()).append(":\r\n\r\n");
+			content.append("    经查，你（单位）于  ").append(tempCase.getThetime())
+			.append("  在  ").append(et_illegal_location.getText().toString().trim())
+			.append("  进行  ").append(et_illegal_behavior.getText().toString().trim())
+			.append("  的行为，因你（单位）现场未能提供相关合法手续，已涉嫌违反")
+			.append(tempCase.getFazhe()).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
+			
+			if (Config.cityTag.equals("cztnq") || Config.cityTag.equals("czxbq") || Config.cityTag.equals("czwjq")
+					|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
+				content.append(Config.cgUnitNameZhiDui);//部门
+			}else {
+				if (Config.cityTag.equals("czjts")){
+					content.append("金坛市城市管理行政执法大队" + Config.user.getBranch_name());//部门
+				}else {
+					content.append(Config.user.getBranch_name());//部门
+				}
+				
+			}
+			content.append("（地址：");
+			content.append(Config.user.getBranch_address());
+			content.append("，联系电话：");
+			content.append(Config.user.getBranch_phone());
+			content.append("）提供上述行为的相关合法手续，逾期不提供的，我局将依法查处。").append("_");
+			//执法人员
+			content.append("执法人员:  ").append("_");
+			
+			//年月日
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+			content.append(String.valueOf(month)).append(" 月 ");
+			content.append(String.valueOf(day)).append(" 日");
 		}else {
-			content.append(Config.user.getBranch_name());//部门
+			content.append(tv_form_title_all.getText().toString().trim()).append("\r\n");
+			content.append(tv_form_title.getText().toString().trim()).append("_");
+//			content.append(tempform.getFormName()).append("_");
+			content.append(Config.posFormTitle +"执通字[").append(String.valueOf(year)).append("]  \r\nNo.")
+			.append(tempCase.getLsh()).append("_");
+			content.append(et_notification_nuit.getText().toString().trim()).append(":\r\n\r\n");
+			content.append("    经查，你（单位）于  ").append(tempCase.getThetime())
+			.append("  在  ").append(et_illegal_location.getText().toString().trim())
+			.append("  进行  ").append(et_illegal_behavior.getText().toString().trim())
+			.append("  的行为，现场未能提供相关合法手续，已涉嫌违反")
+			.append(tempCase.getFazhe()).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
+			
+			if (Config.cityTag.equals("cztnq") || Config.cityTag.equals("czxbq") || Config.cityTag.equals("czwjq")
+					|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
+				content.append(Config.cgUnitNameZhiDui);//部门
+			}else {
+				content.append(Config.user.getBranch_name());//部门
+			}
+			content.append("（地址：");
+			content.append(Config.user.getBranch_address());
+			content.append("，联系电话：");
+			content.append(Config.user.getBranch_phone());
+			content.append("）提供上述行为的相关合法手续，逾期不提供的，视作无合法手续，我局将依法查处。").append("_");
+			//执法人员
+			content.append("执法人员:  ").append("_");
+			
+			//年月日
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+			content.append(String.valueOf(month)).append(" 月 ");
+			content.append(String.valueOf(day)).append(" 日");
 		}
-		content.append("（地址：");
-		
-		//地址
-//		if (type == 0) {
-//			content.append(tempCase.getOadd());// 
-//		} else if (type == 1) {
-//			content.append(tempCase.getPadd());// 
-//		}
-		content.append(Config.user.getBranch_address());
-		content.append("，联系电话：");
-		//联系电话
-//		if (type == 0){
-//			content.append(tempCase.getOtel());//
-//		}else if (type == 1){
-//			content.append(tempCase.getPtel());//
-//		}
-		content.append(Config.user.getBranch_phone());
-		content.append("）提供上述行为的相关合法手续，逾期不提供的，视作无合法手续，我局将依法查处。").append("_");
-		//执法人员
-//		content.append("执法人员:  ").append(Config.user.getName()).append("_");
-		//执法人员
-		content.append("执法人员:  ").append("_");
-		
-		//年月日
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
-		content.append(String.valueOf(month)).append(" 月 ");
-		content.append(String.valueOf(day)).append(" 日");
 		
 		return content.toString();
 //		return Html.fromHtml(content.toString()).toString();

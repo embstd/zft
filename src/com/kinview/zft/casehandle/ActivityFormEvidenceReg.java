@@ -272,7 +272,12 @@ public class ActivityFormEvidenceReg extends Activity {
 				|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
 			et_evidence_registration_7.setText(Config.cgUnitNameZhiDui);//部门
 		}else {
-			et_evidence_registration_7.setText(Config.user.getBranch_name());//部门
+			if (Config.cityTag.equals("czjts")){
+				et_evidence_registration_7.setText("金坛市城市管理行政执法大队" + Config.user.getBranch_name());//部门
+			}else {
+				et_evidence_registration_7.setText(Config.user.getBranch_name());//部门
+			}
+			
 		}
 //		et_evidence_registration_7.setText(Config.cgUnitName + Config.cgUnitNameDaDui);
 		et_evidence_registration_8.setText(Config.user.getBranch_address());

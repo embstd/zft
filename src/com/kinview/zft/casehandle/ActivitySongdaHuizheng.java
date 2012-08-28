@@ -397,7 +397,7 @@ public class ActivitySongdaHuizheng extends Activity {
 		
 		//年月日
 		//年月日
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		

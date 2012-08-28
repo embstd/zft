@@ -344,12 +344,12 @@ public class ActivityFormSiteRecordInfo extends Activity {
 				content.append("\r\n");
 			}
 		}
-		content.append("当事人签名:").append("\r\n\r\n\r\n");
+		content.append("\r\n当事人签名:").append("\r\n\r\n\r\n");
 		content.append("检查人员签名:").append("\r\n\r\n\r\n");
 		content.append("见证人签名:").append("_").append("\r\n\r\n\r\n");
 		
 		//年月日
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		return content.toString();

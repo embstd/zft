@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kinview.zft"
     android:versionCode="1"
-    android:versionName="2.4" >
+    android:versionName="2.6" >
     
     <supports-screens android:largeScreens="true" android:anyDensity="true"/>
 
@@ -175,7 +175,7 @@
         <activity
             android:name="com.kinview.camera.ActivityCamera"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
