@@ -233,8 +233,8 @@ public class ActivityFormSiteRecordInfo extends Activity {
 	
 	@Override
 	protected void onPause() {
-		super.onPause();
 		Config.otherTabBdContent = getFormContentWhenPause();
+		super.onPause();
 		posPrint.setVisibility(View.VISIBLE);
 	}
 
@@ -344,9 +344,9 @@ public class ActivityFormSiteRecordInfo extends Activity {
 				content.append("\r\n");
 			}
 		}
-		content.append("\r\n当事人签名:").append("\r\n\r\n\r\n");
+		content.append("\r\n\r\n\r\n当事人签名:").append("\r\n\r\n\r\n");
 		content.append("检查人员签名:").append("\r\n\r\n\r\n");
-		content.append("见证人签名:").append("_").append("\r\n\r\n\r\n");
+		content.append("见证人签名:").append("_").append("\r\n");
 		
 		//年月日
 		content.append("\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");

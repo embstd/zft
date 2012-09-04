@@ -125,25 +125,30 @@ public class ActivityFormSiteRecordSituation extends Activity {
 	private void showCaseInfo(){
 		Log.i("ZFTSP", String.valueOf(Config.currentNewCaseList.toString()));
 		
-		String dateStr = Config.currentNewCaseList.get(0).getThetime() ;
-//		String dateStr = "2012/07/1 10:22:44";
-		String[] ds = null;
-		if (dateStr.indexOf("/") != -1){
-			dateStr = dateStr.substring(0, dateStr.lastIndexOf("/")+3);
-//			dateStr = dateStr.substring(0, dateStr.indexOf(" ")+1);
-			ds = dateStr.split("/");
-		}
+//		String dateStr = Config.currentNewCaseList.get(0).getThetime() ;
+////		String dateStr = "2012/07/1 10:22:44";
+//		String[] ds = null;
+//		if (dateStr.indexOf("/") != -1){
+//			dateStr = dateStr.substring(0, dateStr.lastIndexOf("/")+3);
+////			dateStr = dateStr.substring(0, dateStr.indexOf(" ")+1);
+//			ds = dateStr.split("/");
+//		}
+//		
+//		String year = "";
+//		String month = "";
+//		String day = "";
+//		if (ds != null){
+//			if (ds.length >2 ){
+//				year = ds[0];
+//				month = ds[1];
+//				day = ds[2];
+//			}
+//		}
 		
-		String year = "";
-		String month = "";
-		String day = "";
-		if (ds != null){
-			if (ds.length >2 ){
-				year = ds[0];
-				month = ds[1];
-				day = ds[2];
-			}
-		}
+		Calendar calendar = Calendar.getInstance();
+		int year = calendar.get(Calendar.YEAR);
+		int month = calendar.get(Calendar.MONTH) + 1;
+		int day = calendar.get(Calendar.DAY_OF_MONTH);
 		
 		/**
 		 * 1.2012年7月23日本局执法人员现场亮证(执法证号:04001344、04008089)巡查时发现该当事人在常州市北塘河路龙湖郦城工程建设中,运输土方车辆车轮带泥行驶,造成北塘河路道路污染. 
@@ -153,9 +158,9 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		if (Config.cityTag.equals("czs")){//大市
 			et_record_conditions_1.setText("\r\n    1." + year + "年" + month + "月" + day + "日" 
 					+ "本局执法人员" 
-					+ "现场亮证(执法证号:" + Config.user.getZfzid() + "、" + Config.user.getU_ZfzID() + ")巡查时发现该当事人在" 
-					+Config.currentNewCaseList.get(0).getAddress() + Config.currentNewCaseList.get(0).getCaseAnYou() + ",造成    路道路污染."
-			+"\r\n    2.经现场检查该当事人未能提供相关手续."
+					+  "巡查时发现该当事人在" 
+					+Config.currentNewCaseList.get(0).getAddress() + Config.currentNewCaseList.get(0).getCaseWeiFaXW() + ",造成    路道路污染."
+			+"\r\n    2.执法人员现场亮证(执法证号:" + Config.user.getZfzid() + "、" + Config.user.getU_ZfzID() +")进行现场检查，该当事人未能提供相关手续."
             +"\r\n    3.经现场测量,该当事人道路污染面积为     平方米."
             +"\r\n    4.执法人员现场拍照取证后发出编号为NO:"+Config.currentNewCaseList.get(0).getLsh()+"的核查通知书,现场责令当事人停止上述行为并立即整改.");
 			
@@ -348,9 +353,9 @@ public class ActivityFormSiteRecordSituation extends Activity {
 		.append(tv_record_conditions_6.getText().toString().trim().replaceAll("_", ""))
 		.append(et_record_conditions_6.getText().toString().trim().replaceAll("_", "")).append("\r\n");
 		
-		content.append("当事人签名:").append("\r\n\r\n\r\n");
+		content.append("\r\n\r\n当事人签名:").append("\r\n\r\n\r\n");
 		content.append("见证人签名:").append("\r\n\r\n\r\n");
-		content.append("检查人员签名:").append("_").append("\r\n\r\n\r\n");
+		content.append("检查人员签名:").append("_").append("\r\n");
 		
 		//年月日
 		content.append("\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");

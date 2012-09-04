@@ -415,7 +415,7 @@ public class ActivityFormVerification extends Activity {
 			et_verification_notice_12.setText("上述行为的书面情况说明;");
 			et_verification_notice_13.setText("营业执照和组织机构代码证复印件;");
 			et_verification_notice_14.setText("《授权委托书》和被委托授权人的相关身份证明;");
-			et_verification_notice_15.setText("");
+//			et_verification_notice_15.setText("");
 		}else if (Config.cityTag.equals("czjts")){
 			et_verification_notice_12.setText("上述行为的书面情况说明;");
 			et_verification_notice_13.setText("相关身份证明资料及复印件;");
@@ -451,7 +451,7 @@ public class ActivityFormVerification extends Activity {
 			content.append(tv_form_title_all_3.getText().toString().trim()).append("\r\n");
 			content.append(tv_form_title_3.getText().toString().trim()).append("_");
 //			content.append(tempform.getFormName()).append("_");
-			content.append(Config.posFormTitle +"执核字[").append(String.valueOf(year1)).append("]  \r\nNo.")
+			content.append(Config.posFormTitle +"执查字[").append(String.valueOf(year1)).append("]  \r\nNo.")
 			.append(tempCase.getLsh()).append("_");
 			content.append(et_verification_notice_1.getText().toString().trim()).append(":\r\n\r\n");
 			content.append("    经查，你（单位）于").append(et_verification_notice_2.getText().toString().trim())
@@ -501,7 +501,7 @@ public class ActivityFormVerification extends Activity {
 			content.append(tv_form_title_all_3.getText().toString().trim()).append("\r\n");
 			content.append(tv_form_title_3.getText().toString().trim()).append("_");
 //			content.append(tempform.getFormName()).append("_");
-			content.append(Config.posFormTitle +"执核字[").append(String.valueOf(year1)).append("]  \r\nNo.")
+			content.append(Config.posFormTitle +"执查字[").append(String.valueOf(year1)).append("]  \r\nNo.")
 			.append(tempCase.getLsh()).append("_");
 			content.append(et_verification_notice_1.getText().toString().trim()).append(":\r\n\r\n");
 			content.append("    经查，你（单位）于").append(et_verification_notice_2.getText().toString().trim())
@@ -545,7 +545,7 @@ public class ActivityFormVerification extends Activity {
 			//地址
 			
 			content.append("_");
-			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
 			content.append(String.valueOf(month1)).append(" 月 ");
 			content.append(String.valueOf(day1)).append(" 日");
 		}
