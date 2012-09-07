@@ -50,7 +50,7 @@ public class ThreadGetCaseInfo extends Thread {
 		result = get(1);
 		if(result!=null){
 			String xml = Assistant.upZipBaseString(result.getResultStr());
-			Log.i("ZFTSP", xml);
+			Log.i("zft", "xml111: "+xml);
 			//mHandler.sendMessage(mHandler.obtainMessage(Msg.ACTIVITY_SHOWTOAST,xml));
 			Config.currentNewCaseList.clear();
 			ArrayList<Object> list = Assistant.parseXml(xml, NewCase.class);

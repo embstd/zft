@@ -154,20 +154,39 @@ public class ActivitySurveyAskRecordBaseInfo extends Activity {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
 		et_survey_ask_base_info_1.setText(sdf.format(date));
-//		et_survey_ask_base_info_2.setText(tempCase.getThetime());
-//		et_survey_ask_base_info_3.setText(tempCase.getAddress());
+		et_survey_ask_base_info_2.setText(tempCase.getAddress());
+		et_survey_ask_base_info_3.setText(Config.name);
 		et_survey_ask_base_info_4.setText(Config.name);
-//		
-//		et_survey_ask_base_info_5.setText(xiandingTimeStr);
-//		et_survey_ask_base_info_6.setText(Config.timebyYMDHMS());
-//		et_survey_ask_base_info_7.setText(Config.user.getBranch_name());
-//		et_survey_ask_base_info_8.setText(Config.user.getBranch_address());
-//		et_survey_ask_base_info_9.setText(Config.user.getBranch_phone());
-//		et_survey_ask_base_info_10.setText("");
-//		et_survey_ask_base_info_11.setText("");
-//		et_survey_ask_base_info_12.setText("");
-//		et_survey_ask_base_info_13.setText("");
-//		et_survey_ask_base_info_14.setText("");
+		
+		int type = 0;//0:组织 1： 个人
+		if (tempCase.getOrganise() == null || tempCase.getOrganise().equals("")){
+			if (tempCase.getPerson() != null){
+				type = 1;
+			}
+		}else {
+			type = 0;
+		}
+		if (type == 1){
+			et_survey_ask_base_info_5.setText(tempCase.getPerson());
+			et_survey_ask_base_info_6.setText(tempCase.getSex());
+			et_survey_ask_base_info_7.setText(tempCase.getIdnumber());
+			et_survey_ask_base_info_8.setText(tempCase.getPtel());
+//			et_survey_ask_base_info_9.setText("");//出生年月
+			et_survey_ask_base_info_10.setText(tempCase.getPadd());
+//			et_survey_ask_base_info_11.setText("");//工作单位
+			et_survey_ask_base_info_12.setText(tempCase.getZw());//职位
+//			et_survey_ask_base_info_13.setText("");//邮编
+		}else {
+			et_survey_ask_base_info_5.setText(tempCase.getFzr());
+			et_survey_ask_base_info_6.setText(tempCase.getSex());
+			et_survey_ask_base_info_7.setText(tempCase.getIdnumber());
+			et_survey_ask_base_info_8.setText(tempCase.getOtel());
+//			et_survey_ask_base_info_9.setText("");
+			et_survey_ask_base_info_10.setText(tempCase.getOadd());
+			et_survey_ask_base_info_11.setText(tempCase.getOrganise());//工作单位
+			et_survey_ask_base_info_12.setText(tempCase.getZw());
+//			et_survey_ask_base_info_13.setText("");//邮编
+		}
 		
 	}
 	
@@ -316,36 +335,36 @@ public class ActivitySurveyAskRecordBaseInfo extends Activity {
 //		.append(tempCase.getLsh()).append("_");
 		
 		content
-		.append("案由： ").append(et_survey_ask_base_info_1.getText().toString().trim())
-		.append("时间： ").append(et_survey_ask_base_info_2.getText().toString().trim())
-		.append("地点： ").append(et_survey_ask_base_info_3.getText().toString().trim())
-		.append("调查人：").append(et_survey_ask_base_info_4.getText().toString().trim())
-		.append("记录人：").append(et_survey_ask_base_info_5.getText().toString().trim())
-		.append("被调查人： ").append(et_survey_ask_base_info_6.getText().toString().trim())
-		.append("性别： ").append(et_survey_ask_base_info_7.getText().toString().trim())
-		.append("出生年月： ").append(et_survey_ask_base_info_8.getText().toString().trim())
-		.append("身份证号码 ： ").append(et_survey_ask_base_info_9.getText().toString().trim())
-		.append("住所： ").append(et_survey_ask_base_info_10.getText().toString().trim())
-		.append("电话： ").append(et_survey_ask_base_info_11.getText().toString().trim())
-		.append("工作单位 ： ").append(et_survey_ask_base_info_12.getText().toString().trim())
-		.append("职务： ").append(et_survey_ask_base_info_13.getText().toString().trim())
-		.append("邮编： ").append(et_survey_ask_base_info_14.getText().toString().trim());
+		.append("案由： ").append(tempCase.getCaseWeiFaXW().toString().trim()).append("\r\n")
+		.append("时间： ").append(et_survey_ask_base_info_1.getText().toString().trim()).append("\r\n")
+		.append("地点： ").append(et_survey_ask_base_info_2.getText().toString().trim()).append("\r\n")
+		.append("调查人：").append(et_survey_ask_base_info_3.getText().toString().trim()).append("\r\n")
+		.append("记录人：").append(et_survey_ask_base_info_4.getText().toString().trim()).append("\r\n")
+		.append("被调查人： ").append(et_survey_ask_base_info_5.getText().toString().trim()).append("\r\n")
+		.append("性别： ").append(et_survey_ask_base_info_6.getText().toString().trim()).append("\r\n")
+		.append("出生年月： ").append(et_survey_ask_base_info_7.getText().toString().trim()).append("\r\n")
+		.append("身份证号码 ： ").append(et_survey_ask_base_info_8.getText().toString().trim()).append("\r\n")
+		.append("住所： ").append(et_survey_ask_base_info_9.getText().toString().trim()).append("\r\n")
+		.append("电话： ").append(et_survey_ask_base_info_10.getText().toString().trim()).append("\r\n")
+		.append("工作单位 ： ").append(et_survey_ask_base_info_11.getText().toString().trim()).append("\r\n")
+		.append("职务： ").append(et_survey_ask_base_info_12.getText().toString().trim()).append("\r\n")
+		.append("邮编： ").append(et_survey_ask_base_info_13.getText().toString().trim()).append("\r\n");
 		
 		content.append("告知： 我们是常州市城市管理行政执法局的执法人员，这是我们的《行政执法证》 "
-				+ " （出示证件），执法证号为              ，          ，现依法前 "
+				+ "（出示证件），执法证号为 "+Config.user.getZfzid()+"，"+Config.user.getU_ZfzID()+"，现依法前 "
 				+ "来进行调查。根据《中华人民共和国行政处罚法》等法律规定，如执法人员少 "
 				+ "于两人或执法证件与身份不符，你有权拒绝调查，如执法人员与案件有直接利 "
-				+ "害关系，你也有权申请执法人员回避。同时你应如实提供有关资料、回答询问，  "
-				+ "如作虚假陈述或拒绝、阻挠调查，将依法追究法律责任。请你配合我们调查询  "
-				+ " 问。你是否听清楚了？\r\n 答： 我听清楚了\r\n ");
-		content.append("问：\r\n");
+				+ "害关系，你也有权申请执法人员回避。同时你应如实提供有关资料、回答询问， "
+				+ "如作虚假陈述或拒绝、阻挠调查，将依法追究法律责任。请你配合我们调查询"
+				+ "问。\r\n问：你是否听清楚了？\r\n答： 我听清楚了\r\n");
+		content.append("笔录内容：\r\n");
 		if (!Config.otherTabBdContent.equals("")){
 			content.append(Config.otherTabBdContent).append("\r\n");
 		}
-		content.append( "被调查人：");
+//		content.append( "被调查人：");
 		
 		content.append("_");
-		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+		content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 		content.append(String.valueOf(month)).append(" 月 ");
 		content.append(String.valueOf(day)).append(" 日");
 		
@@ -368,8 +387,7 @@ public class ActivitySurveyAskRecordBaseInfo extends Activity {
 		.append(et_survey_ask_base_info_10.getText().toString().trim()).append("_")
 		.append(et_survey_ask_base_info_11.getText().toString().trim()).append("_")
 		.append(et_survey_ask_base_info_12.getText().toString().trim()).append("_")
-		.append(et_survey_ask_base_info_13.getText().toString().trim()).append("_")
-		.append(et_survey_ask_base_info_14.getText().toString().trim());
+		.append(et_survey_ask_base_info_13.getText().toString().trim()).append("_");
 		
 		return content.toString();
 //		return Html.fromHtml(content.toString()).toString();
@@ -397,8 +415,7 @@ public class ActivitySurveyAskRecordBaseInfo extends Activity {
 		.append(et_survey_ask_base_info_10.getText().toString().trim()).append("_")
 		.append(et_survey_ask_base_info_11.getText().toString().trim()).append("_")
 		.append(et_survey_ask_base_info_12.getText().toString().trim()).append("_")
-		.append(et_survey_ask_base_info_13.getText().toString().trim()).append("_")
-		.append(et_survey_ask_base_info_14.getText().toString().trim());
+		.append(et_survey_ask_base_info_13.getText().toString().trim());
 		
 //		if (!Config.otherTabBdContentSubmit.equals("")){
 //			content.append("_").append(Config.otherTabBdContentSubmit).append("_");

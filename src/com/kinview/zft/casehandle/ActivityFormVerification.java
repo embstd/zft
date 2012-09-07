@@ -261,10 +261,28 @@ public class ActivityFormVerification extends Activity {
 		}
 		
 //		et_verification_notice_1.setText(Config.currentNewCaseList.get(0).getOrganise());
-		et_verification_notice_2.setText(Config.currentNewCaseList.get(0).getThetime());
+		String str[] =null;
+		if (Config.cityTag.equals("czs")){
+			str = Config.currentNewCaseList.get(0).getThetime().split("-");
+		}else {
+			str = Config.currentNewCaseList.get(0).getThetime().split("/");
+		}
+		
+		String year = "";
+		String month = "";
+		String day = "";
+		if (str.length > 2){
+			year = str[0];
+			month = str[1];
+			day = str[2].substring(0, 2);
+			et_verification_notice_2.setText(year+"年"+month+"月"+day+"日");
+		}else {
+			et_verification_notice_2.setText(Config.currentNewCaseList.get(0).getThetime());
+		}
+		
 		et_verification_notice_3.setText(Config.currentNewCaseList.get(0).getAddress());
 		et_verification_notice_4.setText(Config.currentNewCaseList.get(0).getCaseWeiFaXW());
-		et_verification_notice_5.setText(Config.currentNewCaseList.get(0).getYiju());
+		et_verification_notice_5.setText(Config.currentNewCaseList.get(0).getYiju().replaceAll(" ", "").replaceAll("\n", "").trim());
 //		et_verification_notice_6.setText(Config.currentNewCaseList.get(0).getOrganise());
 //		xiandingTimeStr = Config.getXiandingTimeString(Config.currentNewCaseList.get(0).getThetime());
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -276,7 +294,7 @@ public class ActivityFormVerification extends Activity {
 			et_verification_notice_8.setText(Config.cgUnitNameZhiDui);//部门
 		}else {
 			if (Config.cityTag.equals("czs")){
-				et_verification_notice_8.setText("支队受理指挥中心");//部门
+				et_verification_notice_8.setText(Config.cgUnitName);//部门
 			}else if (Config.cityTag.equals("czjts")){
 				et_verification_notice_8.setText("金坛市城市管理行政执法大队" + Config.user.getBranch_name());//部门
 			}else{
@@ -508,7 +526,7 @@ public class ActivityFormVerification extends Activity {
 			.append("，在").append(et_verification_notice_3.getText().toString().trim())
 			.append("，进行").append(et_verification_notice_4.getText().toString().trim())
 			.append("的行为，已涉嫌违反")
-			.append(tempCase.getYiju()).append("之规定.\r\n    ");//分段
+			.append(et_verification_notice_5.getText().toString().replaceAll(" ", "").trim()).append("的有关规定.\r\n    ");//分段
 			content.append("因你（单位）未能提供上述行为之合法依据，现责令你（单位）自接到本通知之日起，立即停止上述行为，并于");
 			content.append(String.valueOf(mYear)).append(" 年 ");
 			content.append(String.valueOf(mMonth+1)).append(" 月 ");
@@ -545,7 +563,7 @@ public class ActivityFormVerification extends Activity {
 			//地址
 			
 			content.append("_");
-			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year1)).append(" 年 ");
 			content.append(String.valueOf(month1)).append(" 月 ");
 			content.append(String.valueOf(day1)).append(" 日");
 		}

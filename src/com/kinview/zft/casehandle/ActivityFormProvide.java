@@ -275,6 +275,24 @@ public class ActivityFormProvide extends Activity {
 		}else {
 			type = 0;
 		}
+		String str[] =null;
+		if (Config.cityTag.equals("czs")){
+			str = tempCase.getThetime().split("-");
+		}else {
+			str = tempCase.getThetime().split("/");
+		}
+		String year1 = "";
+		String month1 = "";
+		String day1 = "";
+		String theTime = "";
+		if (str.length > 2){
+			year1 = str[0];
+			month1 = str[1];
+			day1 = str[2].substring(0, 2);
+			theTime = year1 + "年"+month1 + "月"+day1 + "日";
+		}else {
+			theTime = tempCase.getThetime();
+		}
 		
 		StringBuffer content = new StringBuffer();
 		if (Config.cityTag.equals("czjts")){//金坛市
@@ -284,17 +302,19 @@ public class ActivityFormProvide extends Activity {
 			content.append(Config.posFormTitle +"执通字[").append(String.valueOf(year)).append("]  \r\nNo.")
 			.append(tempCase.getLsh()).append("_");
 			content.append(et_notification_nuit.getText().toString().trim()).append(":\r\n\r\n");
-			content.append("    经查，你（单位）于  ").append(tempCase.getThetime())
-			.append("  在  ").append(et_illegal_location.getText().toString().trim())
-			.append("  进行  ").append(et_illegal_behavior.getText().toString().trim())
-			.append("  的行为，因你（单位）现场未能提供相关合法手续，已涉嫌违反")
-			.append(tempCase.getFazhe()).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
+			content.append("    经查，你（单位）于  ").append(theTime)
+			.append("在").append(et_illegal_location.getText().toString().trim())
+			.append("，进行").append(et_illegal_behavior.getText().toString().trim())
+			.append("的行为，因你（单位）现场未能提供相关合法手续，已涉嫌违反")
+			.append(tempCase.getFazhe().replaceAll(" ", "")).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
 			
 			if (Config.cityTag.equals("cztnq") || Config.cityTag.equals("czxbq") || Config.cityTag.equals("czwjq")
 					|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
 				content.append(Config.cgUnitNameZhiDui);//部门
 			}else {
-				if (Config.cityTag.equals("czjts")){
+				if (Config.cityTag.equals("czs")){
+					content.append(Config.cgUnitName);//部门
+				}else if (Config.cityTag.equals("czjts")){
 					content.append("金坛市城市管理行政执法大队" + Config.user.getBranch_name());//部门
 				}else {
 					content.append(Config.user.getBranch_name());//部门
@@ -307,10 +327,15 @@ public class ActivityFormProvide extends Activity {
 			content.append(Config.user.getBranch_phone());
 			content.append("）提供上述行为的相关合法手续，逾期不提供的，我局将依法查处。").append("_");
 			//执法人员
-			content.append("执法人员:  ").append("_");
+			content.append("当事人签名:\r\n\r\n\r\n");
+			content.append("电话:\r\n\r\n\r\n");
+			content.append("执法人员签名:\r\n\r\n\r\n");
+			content.append("见证人签名:\r\n\r\n\r\n").append("_");
+			
+//			content.append("执法人员:  ").append("_");
 			
 			//年月日
-			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 			content.append(String.valueOf(month)).append(" 月 ");
 			content.append(String.valueOf(day)).append(" 日");
 		}else {
@@ -320,15 +345,17 @@ public class ActivityFormProvide extends Activity {
 			content.append(Config.posFormTitle +"执通字[").append(String.valueOf(year)).append("]  \r\nNo.")
 			.append(tempCase.getLsh()).append("_");
 			content.append(et_notification_nuit.getText().toString().trim()).append(":\r\n\r\n");
-			content.append("    经查，你（单位）于  ").append(tempCase.getThetime())
-			.append("  在  ").append(et_illegal_location.getText().toString().trim())
-			.append("  进行  ").append(et_illegal_behavior.getText().toString().trim())
-			.append("  的行为，现场未能提供相关合法手续，已涉嫌违反")
-			.append(tempCase.getFazhe()).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
+			content.append("    经查，你（单位）于  ").append(theTime)
+			.append("在").append(et_illegal_location.getText().toString().trim())
+			.append("进行").append(et_illegal_behavior.getText().toString().trim())
+			.append("的行为，现场未能提供相关合法手续，已涉嫌违反")
+			.append(tempCase.getFazhe().replaceAll(" ", "").replaceAll("\n", "").trim()).append("的有关规定，现责令你（单位）立即停止上述行为，并在收到本通知之日起3日内向");
 			
 			if (Config.cityTag.equals("cztnq") || Config.cityTag.equals("czxbq") || Config.cityTag.equals("czwjq")
 					|| Config.cityTag.equals("czzlq") || Config.cityTag.equals("czqsyq")){
 				content.append(Config.cgUnitNameZhiDui);//部门
+			}else if (Config.cityTag.equals("czs")){
+				content.append(Config.cgUnitName);//部门
 			}else {
 				content.append(Config.user.getBranch_name());//部门
 			}
@@ -338,10 +365,15 @@ public class ActivityFormProvide extends Activity {
 			content.append(Config.user.getBranch_phone());
 			content.append("）提供上述行为的相关合法手续，逾期不提供的，视作无合法手续，我局将依法查处。").append("_");
 			//执法人员
-			content.append("执法人员:  ").append("_");
+			content.append("当事人签名:\r\n\r\n\r\n");
+			content.append("电话:\r\n\r\n\r\n");
+			content.append("执法人员签名:\r\n\r\n\r\n");
+			content.append("见证人签名:\r\n\r\n\r\n").append("_");
+			
+//			content.append("执法人员:  ").append("_");
 			
 			//年月日
-			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
+			content.append("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n" + String.valueOf(year)).append(" 年 ");
 			content.append(String.valueOf(month)).append(" 月 ");
 			content.append(String.valueOf(day)).append(" 日");
 		}

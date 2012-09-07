@@ -8,6 +8,7 @@ import org.ksoap2.serialization.SoapObject;
 
 import android.R.integer;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.kinview.config.Config;
 import com.kinview.config.print;
@@ -415,6 +416,7 @@ public class Server {
 		// 加入参数
 		HashMap<String, Object> params = new HashMap<String, Object>();
 		params.put("caseid", String.valueOf(caseId));
+		Log.i("zft", "caseId111: "+String.valueOf(caseId));
 		
 		WebService webService = new WebService(functionName,params);
 		SoapObject soapObject = (SoapObject)webService.CallWebService();
